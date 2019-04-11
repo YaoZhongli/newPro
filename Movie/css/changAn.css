@@ -1,0 +1,48 @@
+.aticles{
+	width: 800px;
+	position: absolute;
+	top: 90px;
+	left: 160px;
+}
+.text_margin{
+	margin-right: 20px;
+}
+#img_chang{
+	width: 800px;
+	height: 421px;
+	margin-top: 10px;
+	display: block;
+}
+.aticles>p{
+	text-indent: 2em;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.aticles>video{
+	margin-left: 50px;
+}
+.zan_share{
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	border: 1px solid orangered;
+	border-radius: 20px;
+	line-height: 50px;
+	margin-right: 80px;
+	text-align: center;
+	color: orangered;
+}
+.only_zan{
+	margin-left: 200px;
+}
+
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    margin: 0 auto;
+    min-width: 1200px;
+    position: relative;
+  	
+    left: 0px;
+}

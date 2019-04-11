@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆|猫眼电影</title>
+     
+	<link rel="stylesheet" href="../css/denglu.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<header class="dlheader">
+		<a href="" class="dllogo"></a>
+	</header>
+
+
+	<div class="dlzb">
+		<div class="dlzs"></div>
+		<div class="dlbt" style="display: block;" id="putongbd">
+			<form action="" method="post">
+				
+				<p style="display: inline;">账号登陆</p>
+				
+				<div class="xtb" style="background-image: url(../img/kongjian.png);
+	              background-position:-1268px -509px; "></div>
+				<a style="display: inline; float: right;" id="shouji">手机动态码登陆</a>
+				<div class="dlbgk">
+					<div class="dlztb" style="background-image: url(../img/kongjian.png); background-position: -1250px -617px"></div>
+					<input type="text" name="yhm" placeholder="手机号/用户名/邮箱" ></div>
+					<div class="dlbgk">
+						<div class="dlztb" style="background-image: url(../img/kongjian.png); background-position: -1250px -527px"></div>
+						<input type="password" name="pwd" placeholder="密码" ></div>		
+						<input type="radio" name="dl" value="zidongdenglu">7天内自动登陆
+
+						<a href="" style="color: #ec454a; float: right; font-size: 12px" >忘记密码</a>
+						<button type="submit" class="dlan">登陆</button>
+						<p>还没有账号？<a href="zhuce.html" style="color: #ec454a">免费注册</a></p>
+					</form>
+				</div>
+				<div class="dlsj" style="display: none;" id="shoujibd">
+					<form action="" method="post">
+
+						<p style="display: inline;">账号登陆</p>
+
+						<div class="xtb" style="background-image: url(../img/kongjian.png);
+	                             background-position:-935px -677px; "></div>
+						<p style="display: inline; float: right; "  id="putong">普通方式登陆</p>
+						<div class="dlbgk" id="shoujikuang">
+							<div class="dlztb" style="background-image: url(../img/kongjian.png); background-position: -1250px -581px;"></div>
+							<input type="text" name="yhm" placeholder="手机号" id="shoujihao">
+							</div>
+
+							<div class="dlbgk" style=" display:none; " id="yzk">
+                              <div class="yz" id="yzda">
+                                <input type="text"  size="5" placeholder="验证码">
+                              </div>
+                              <div  class="yz" style="background-color: black;color: white"> 8 - 7 = ?</div>
+
+
+							</div>
+							<div class="dlbgk">
+								<div class="dlztb" style="background-image: url(../img/kongjian.png); background-position: -1250px -527px"></div>
+								<input type="password" name="pwd" placeholder="动态码" >
+                                <p style="display: inline;font-size: 10px" id="huoqudtm">获取手机动态码</p>
+								</div>		
+								<input type="radio" name="dl" value="zidongdenglu">7天内自动登陆
+
+								<a href="" style="color: #ec454a; float: right; font-size: 12px" >忘记密码</a>
+								<button type="submit" class="dlan">登陆</button>
+								
+							</form>
+
+						</div>
+     </div>
+
+
+
+     <footer>
+       <div class="di">
+        <p>
+            ©2018 <a href="http://meituan.com/" style="color: #666;">美团网团购</a> meituan.com 京ICP证070791号 京公网安备11010502025545号 电子公告服务规则
+
+        </p>
+       </div>
+     </footer>
+
+     <script>
+           $("#shouji").click(function(){
+    	  console.log("点击手机了");
+            $("#putongbd").attr('style','display: none;')
+            $("#shoujibd").attr('style','display: block;')
+       });
+           $("#putong").click(function(){
+    	  console.log("点击普通了");
+    	    $("#putongbd").attr('style','display: block;')
+            $("#shoujibd").attr('style','display: none;')
+       });
+           $("#huoqudtm").click(function(){
+             console.log("点击获取手机动态码");
+             var  shoujihao = $("#shoujihao");
+             console.log(shoujihao.val());
+             var shoujikuang=$("#shoujikuang")
+             var telReg = !!shoujihao.val().match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/);
+              if (shoujihao.val()=="") {
+                    shoujikuang.attr('style','border:2px red solid')
+              }else if(telReg == false){
+              	  shoujikuang.attr('style','border:2px red solid')
+                  console.log("请输入正确的手机号码")
+              }else{
+                  shoujikuang.attr('style','border: 1px black solid;')
+                  $("#yzk").attr('style','display: block; border: 0px;')
+
+              }
+           })
+
+     </script>
+ </body>
+ </html>

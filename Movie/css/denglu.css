@@ -1,0 +1,199 @@
+*{
+	margin: 0  auto;
+}
+
+.dlzb input{
+  border: 0px;
+  outline:none;
+  cursor: pointer;
+   }
+.zczb input{
+     
+     size: 30px;
+     width: 260px;
+     height: 36px;
+}
+.dlheader{
+	width: 980px;
+	height: 45px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.dllogo{
+    width: 230px;
+	height: 45px;
+	display: block;
+    float: left;
+	background-image: url(../img/kongjian.png);
+	position: relative;
+    background-position: -394px -677px;
+}
+
+
+.dlzb{
+    width: 980px;
+	height: 370px;
+    margin-bottom: 50px;
+
+
+}
+.dlzs{
+     width: 480px;
+	height: 370px;
+	float: left;
+    background-image: url(../img/zhu.png);
+
+}
+.dlbt{
+	 width: 270px;
+	 height: 271px;
+	 float: right;
+	 font-size: 14px;
+	 color: #666;
+	 margin: 35px 120px 15px 0px;
+}
+
+.xtb{
+	width: 10px;
+	height:13px;
+	display: inline;
+	float: right;
+	position: relative;
+	top: 3px;
+	left: 2px;
+}
+.dlbgk{
+	width: 270px;
+    height:25px;
+    border: 1px black solid;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.dlztb{
+    width: 18px;
+    height:18px;
+    position: relative;
+   float: left;
+   margin: 5px;
+}
+.dlan{
+    width: 270px;
+    height:30px;
+	color: white;
+	border:#ec454a; 
+    background: linear-gradient(to bottom,#ec454a 0,#e02025 100%);
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+.dlsj{
+    width: 270px;
+	 height: 271px;
+	 float: right;
+	 font-size: 14px;
+	 color: #666;
+	 margin: 35px 120px 15px 0px;
+
+
+}
+.yz{
+     width: 100px;
+	 height: 27px;
+	 float: left;
+	 position: relative;
+	 top: -8px;
+	 font-size: 20px;
+	 color: #666;
+	 border: 1px black solid;
+     margin: 5px;
+}
+
+
+
+
+.di{
+    width: 980px;
+    height:18px;
+    font-size: 10px;
+    color: #666;
+     text-align: center;
+     clear: both;
+}
+
+
+
+
+.zcheader{
+	width: 1500px;
+    height:58px;
+    border-bottom: 2px red solid;
+}
+.zclogo{
+    width: 133px;
+    height:40px;
+    display: block;
+    margin-top: 10px;
+    float: left;
+	background-image: url(img/kongjian.png);
+	position: relative;
+    background-position: -536px -748px;
+    left: 275px;
+}
+.zczb{
+	 width: 980px;
+     height:415px;
+     font-size: 14px;
+     margin-top: 20px;
+}
+.zcbdk{
+     width: 500px;
+     height: 45px;
+     float: left;
+     padding: 8px 0px 8px 110px;
+     align-items: center; 
+    display: flex;
+}
+.zcbdk label{
+   float: left;
+    text-align: right;
+}
+.zcts{
+    font-size: 14px;
+    color:grey;
+    float: right;
+    width: 155px;
+}
+.jg{
+	width:17px; 
+	height:17px;
+	float: left;
+	background-image: url(img/jg.png);
+	position: relative;
+    background-position: 0 -296px;
+}
+.zcbdkx{
+	width:135px; 
+	height:30px;
+	font-size: 12px;
+	float: left;
+	background:linear-gradient(to bottom,#f7f7f7,#dedede);
+    border: 1px solid #e3e3e3;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    
+}
+.zcbdyz{
+    width:100px; 
+	height:20px;
+	color: white;
+	font-size: 12px;
+	float: left;
+	background:linear-gradient(to bottom,#f7f7f7,#dedede);
+    border: 1px solid #e3e3e3;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    margin: 1px;
+    position: relative;
+    left: 150px;
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签必须放在最前面-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/flims.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../js/films.js" type="text/javascript" charset="utf-8"></script>
+		<title>电影</title>
+	</head>
+
+	<body>
+		<!--导航-->
+		<div class='container-fluid'>
+		<div class='container-fluid nav_fix'>
+			<div class="row ">
+				<div class="col-md-3 head_nav">
+					<div class="col-md-2"></div>
+					<div class="col-md-6">
+						<img src="../img/log.jpg" class="img-responsive"/>
+					</div>
+					<div class="col-md-3">
+						<!-- Single button -->
+						<div class="btn-group">
+						  <button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	成都<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">定位城市：成都</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">马达加斯加   新奥尔良  </a></li>
+						    <li><a href="#">梁平   上海   </a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">北京</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7 head_nav">
+					<div class="col-md-7">
+						<div class="col-md-2 nav_title nav_first"><a class="nav_a" href="index.html">首页</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="films.html">电影</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="yingyuan.html">影院</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="board.html">榜单</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="redian.html">热点</a></div>
+						<div class="col-md-2 nav_title"></div>
+					</div>
+					<div class="col-md-2 app_download">APP下载<span class="caret"></span></div>
+					<div class="hide sao_sao">
+						<div class="sao_img"></div>
+						<div>扫一扫下载app</div>
+						<span>选座更优惠</span>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group nav_search">
+					      <input type="text" class="form-control" placeholder="Search for movies...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default bg_danger" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-2 head_nav">
+					<div class="btn-group">
+						<button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	<span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li><a href="denglu.html">登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!--子导航-->
+		<div class="clear">
+			
+		</div>
+		<div class="row subnav">
+
+			<div class="col-md-3"></div>
+			<div class="col-md-2 subnav1">正在热映<span class="show" id="san2"></span></div>
+			<div class="col-md-2 subnav2">即将上映<span class="hide" id="san2"></div>
+			<div class="col-md-2 subnav2">经典影片<span class="hide" id="san2"></div>
+			<div class="col-md-3"></div>
+		</div>
+
+		<!--分类-->
+		<div class="container type">
+			<div class="row ">
+				<ul class="nav nav-tabs type1">
+					<li>类型：</li>
+					<li class="active">全部</li>
+					<li>爱情</li>
+					<li>喜剧</li>
+					<li>动画</li>
+					<li>剧情</li>
+					<li>惊悚</li>
+					<li>科幻</li>
+					<li>动作</li>
+					<li>悬疑</li>
+					<li>犯罪 </li>
+					<li>奇幻</li>
+					<li>战争 </li>
+					<li>运动</li>
+					<li>家庭</li>
+					<li>古装 </li>
+					<li>武侠</li>
+					<li>西部</li>
+					<li>历史</li>
+					<li>传记</li>
+					<li>短片</li>
+					<li> 纪录片</li>
+					<li>其他爱情</li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul class="nav nav-tabs type1">
+					<li>区域：</li>
+					<li class="active">全部</li>
+					<li>美国</li>
+					<li>大陆</li>
+					<li>韩国</li>
+					<li>日本</li>
+					<li>中国香港</li>
+					<li>台湾</li>
+					<li>印度</li>
+					<li>法国</li>
+					<li>俄罗斯</li>
+					<li>意大利</li>
+					<li>西班牙</li>
+					<li>德国</li>
+					<li>波兰</li>
+					<li>澳大利亚</li>
+					<li>伊朗</li>
+					<li>其他</li>
+				</ul>
+			</div>
+			<div class="row">
+				<ul class="nav nav-tabs type1">
+					<li>年代：</li>
+					<li class="active">全部</li>
+					<li>2018以后</li>
+					<li>2017</li>
+					<li>2016</li>
+					<li>2015</li>
+					<li>2014</li>
+					<li>2013</li>
+					<li>2012</li>
+					<li>2011</li>
+					<li>2000-2010</li>
+					<li>90年代</li>
+					<li>80年代</li>
+					<li>70年代</li>
+					<li>更早</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<!--分类结束-->
+
+		<!--排序-->
+		<div class="container">
+			<div class="row pai">
+				<span class="glyphicon glyphicon-record" style="color: red;">
+				
+			</span>
+				<span>按热门排序</span>
+				<span class="glyphicon glyphicon-record" >
+				
+			</span>
+				<span>按时间排序</span>
+				<span class="glyphicon glyphicon-record">
+				
+			</span>
+				<span>按评价顺序排序</span>
+			</div>
+
+		</div>
+
+		<!---->
+		<div class="container">
+			<div class="row one">
+				<div class="col-md-2">
+					<div class="img1">
+						<a href="det.html"><img src="../img/1.jpg" /></a>
+						
+
+					</div>
+					<span class="tit"><a href="det.html">悲伤逆流成河</a></span>
+					<br />
+					<span class="sorc">9.1</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/2.jpg" />
+
+					</div>
+					<span class="tit"><a href="">黄金兄弟</a></span>
+					<br />
+					<span class="sorc">8.5</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/3.jpg" />
+
+					</div>
+					<span class="tit"><a href="">名侦探柯南：零的执行人</a></span>
+					<br />
+					<span class="sorc sorc1">暂无评分</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/4.jpg" />
+
+					</div>
+					<span class="tit"><a href="">找到你</a></span>
+					<br />
+					<span class="sorc">9.0</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/5.jpg" />
+
+					</div>
+					<span class="tit"><a href="">西虹市首富</a></span>
+					<br />
+					<span class="sorc">9.2</span>
+				</div>
+				<div class="col-md-2 ">
+					<div class="img1">
+						<img src="../img/6.jpg" />
+
+					</div>
+					<span class="tit"><a href="">雪怪大冒险</a></span>
+					<br />
+					<span class="sorc sorc1">暂无评分</span>
+				</div>
+
+			</div>
+
+			<div class="row one">
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/7.jpg" />
+
+					</div>
+					<span class="tit"><a href="">昨日晴空</a></span>
+					<br />
+					<span class="sorc">8.7</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/8.jpg" />
+
+					</div>
+					<span class="tit"><a href="">无双</a></span>
+					<br />
+					<span class="sorc">8.9</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/9.jpg" />
+
+					</div>
+					<span class="tit"><a href="">影</a></span>
+					<br />
+					<span class="sorc">8.2</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/10.jpg" />
+
+					</div>
+					<span class="tit"><a href="">李茶的姑妈</a></span>
+					<br />
+					<span class="sorc">7.9</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/11.jpg" />
+
+					</div>
+					<span class="tit"><a href="">铁血战士</a></span>
+					<br />
+					<span class="sorc sorc1">暂无评分</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/12.jpg" />
+
+					</div>
+					<span class="tit"><a href="">江湖儿女</a></span>
+					<br />
+					<span class="sorc">7.7</span>
+				</div>
+
+			</div>
+
+			<div class="row one">
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/1.jpg" />
+
+					</div>
+					<span class="tit"><a href="">悲伤逆流成河</a></span>
+					<br />
+					<span class="sorc">9.1</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/2.jpg" />
+
+					</div>
+					<span class="tit"><a href="">黄金兄弟</a></span>
+					<br />
+					<span class="sorc">8.5</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/3.jpg" />
+
+					</div>
+					<span class="tit"><a href="">名侦探柯南：零的执行人</a></span>
+					<br />
+					<span class="sorc sorc1">暂无评分</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/4.jpg" />
+
+					</div>
+					<span class="tit"><a href="">找到你</a></span>
+					<br />
+					<span class="sorc">9.0</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/5.jpg" />
+
+					</div>
+					<span class="tit"><a href="">西虹市首富</a></span>
+					<br />
+					<span class="sorc">9.2</span>
+				</div>
+				<div class="col-md-2">
+					<div class="img1">
+						<img src="../img/6.jpg" />
+
+					</div>
+					<span class="tit"><a href="">雪怪大冒险</a></span>
+					<br />
+					<span class="sorc sorc1">暂无评分</span>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--分页-->
+		<div class="container fenye">
+			<div class="row">
+				<nav aria-label="Page navigation">
+			<ul class="pagination fen">
+				<li class="active">
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				
+				<li>
+					<a href="#" aria-label="Next">
+						<span aria-hidden="true">下一页</span>
+					</a>
+				</li>
+			</ul>
+			</nav>
+			</div>
+			
+		</div>
+		<div class="clear"></div>
+		<!--底部-->
+		<div class="row">
+			<div class="footer">
+			<p>商务合作邮箱：v@maoyan.com 客服电话：10105335 违法和不良信息举报电话：4006018900</p>
+			<p>投诉举报邮箱：tousujubao@meituan.com 舞弊线索举报邮箱：wubijubao@maoyan.com</p>
+			<p>
+				友情链接 :<a href="http://www.meituan.com" data-query="utm_source=wwwmaoyan" target="_blank">美团网</a>
+				<span></span>
+				<a href="http://www.meituan.com/client" data-query="utm_source=wwwmaoyan" target="_blank">美团下载</a>
+				<span></span>
+				<a href="https://www.huanxi.com" data-query="utm_source=wwwmaoyan_pc" target="_blank">欢喜首映</a>
+				<span></span>
+			</p>
+			<p>©2016 猫眼电影</p>
+			<p>北京猫眼文化传媒有限公司</p>
+		</div>
+
+		</div>
+		
+		<!--<script type="text/javascript">
+			$(".app_download").on("mouseover",function(){
+        	$(".app_download").find("span").removeClass("caret");
+        	$(".app_download").find("span").addClass("caret1");
+        	$(".app_download").next().removeClass("hide");
+        })
+        $(".app_download").on("mouseleave",function(){
+        	$(".app_download").find("span").removeClass("caret1");
+        	$(".app_download").find("span").addClass("caret");
+        	$(".app_download").next().addClass("hide");
+        })
+        
+		</script>-->
+	
+
+	</body>
+
+</html>

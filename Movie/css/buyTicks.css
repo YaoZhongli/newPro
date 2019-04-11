@@ -1,0 +1,143 @@
+.banner{
+	width: 100%;
+    min-width: 1200px;
+    height: 320px;
+    background: #392f59 no-repeat;
+    font-family: Microsoft YaHei,Helvetica,Arial,sans-serif;
+}
+.places_detail{
+	position: relative;
+	top: 100px;
+}
+.img_border>img{
+	display: block;
+	padding: 0px;
+	border: 4px solid white;
+}
+.img_border{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	left: 80px;
+	top: 60px;
+}
+.img_border>p{
+	display: block;
+	width: 292px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	position: absolute;
+	bottom: -5px;
+	left: 4px;
+}
+.text_gray{
+	color: darkgrey;
+}
+.lables{
+	margin-top: 20px;
+}
+.label-default{
+	background:  #392f59;
+	border: 1px solid darkgray;
+	font-weight: 400;
+	color: darkgrey;
+}
+.hr_line{
+	width: 200px;
+	height: 4px;
+}
+.hr_line{
+	display: inline-block;
+	width: 180px;
+	height: 2px;
+	border: 1px solid darkgray;
+}
+.movie_list{
+	width: 1200px;
+	height: 280px;
+	background-color: gainsboro;
+	position: relative;
+	top: 178px;
+}
+.movie_list>ul{
+	padding: 0px;
+	line-height: 280px;
+}
+.movie_list>ul>li{
+	width: 132px;
+	height: 186px;
+	padding: 0px;
+	display: inline-block;
+	margin-left: 54px;
+}
+.movie_list>ul>li>img{
+	width: 100%;
+	height: 100%;
+	border: 4px solid white;
+}
+.detail_time{
+	background-color: white;
+	width: 1200px;
+	position: relative;
+	top: 182px;
+}
+.movie_produce>h3{
+	display: inline;
+}
+.more_details{
+	width: 100%;
+	height: 41px;
+	border-bottom: 1px solid darkgray;
+}
+.lable_date{
+	background-color: orangered;
+	color: white;
+	border: none;
+	font-size: 14px;
+}
+.odd_line{
+	background-color: darkgray;
+}
+.first_line{
+	width: 100%;
+	height: 74px;
+}
+.movie_tips{
+	display: block;
+	line-height: 70px;
+}
+.choose_seat{
+	position: relative;
+	top: 30px;
+}
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    min-width: 1200px;
+   position: relative;
+   top: 120px;
+}
+
+.footer a {
+	color: red;
+}
+
+.footer p{
+	margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer span{
+	display: inline-block;
+    border-left: 1px solid #444;
+    margin: 0 7px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+}
+

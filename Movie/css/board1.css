@@ -1,0 +1,98 @@
+.subnav{
+	width: 100%;
+	height: 60px;
+	background-color: #47464a;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	line-height: 60px;
+	position: relative;
+	margin-top: 80px;
+}
+.subnav1{
+	color: red;
+}
+#san2{
+	width: 0px;
+	height: 0px;
+	border: 8px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	left: 104px;
+	bottom: 0px;
+}
+.first{
+	margin-left: 55px;
+	margin-top:73px;
+}
+.guiall{
+	height:100px;
+	line-height: 20px;
+	margin-top: 20px;
+	
+}
+.gui,.time {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+.t_txt {
+    color: #ffb400;
+    margin-left: 4px;
+}
+.gui{
+    margin-top: 6px;
+}
+.integer {
+
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFB400;
+    text-align: center;
+	margin: 0 auto;
+	display: inline-block;
+
+	position:absolute;
+	bottom: -154px;
+}
+.cont1{
+	border-bottom: 1px solid #E5E5E5;
+	height: 200px;
+}
+
+
+
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    margin: 0 auto;
+    min-width: 1200px;
+    margin-top: 82px;
+}
+
+.footer a {
+	color: red;
+}
+
+.footer p{
+	margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer span{
+	display: inline-block;
+    border-left: 1px solid #444;
+    margin: 0 7px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+}
+
+
+
+
+

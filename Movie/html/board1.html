@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签必须放在最前面-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/board1.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<title></title>
+	</head>
+	<body>
+		<!--导航-->
+		<div class='container-fluid'>
+		<div class='container-fluid nav_fix'>
+			<div class="row ">
+				<div class="col-md-3 head_nav">
+					<div class="col-md-2"></div>
+					<div class="col-md-6">
+						<img src="../img/log.jpg" class="img-responsive"/>
+					</div>
+					<div class="col-md-3">
+						<!-- Single button -->
+						<div class="btn-group">
+						  <button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	成都<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">定位城市：成都</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">马达加斯加   新奥尔良  </a></li>
+						    <li><a href="#">梁平   上海   </a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">北京</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7 head_nav">
+					<div class="col-md-7">
+						<div class="col-md-2 nav_title">首页</div>
+						<div class="col-md-2 nav_title">电影</div>
+						<div class="col-md-2 nav_title">影院</div>
+						<div class="col-md-2 nav_title">榜单</div>
+						<div class="col-md-2 nav_title">热点</div>
+						<div class="col-md-2 nav_title"></div>
+					</div>
+					<div class="col-md-2 app_download">APP下载<span class="caret"></span></div>
+					<div class="hide sao_sao">
+						<div class="sao_img"></div>
+						<div>扫一扫下载app</div>
+						<span>选座更优惠</span>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group nav_search">
+					      <input type="text" class="form-control" placeholder="Search for movies...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default bg_danger" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-2 head_nav">
+					<div class="btn-group">
+						<button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	<span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li><a href="denglu.html">登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear">
+			
+		</div>
+		
+		<div class="row subnav">
+
+			<div class="col-md-1"></div>
+			<div class="col-md-2 subnav1">正在热映<span class="show" id="san2"></span></div>
+			<div class="col-md-2 subnav2">最受期待<span class="hide" id="san2"></div>
+			<div class="col-md-2 subnav2">国内票房榜<span class="hide" id="san2"></div>
+			<div class="col-md-2 subnav2">北美票房榜<span class="hide" id="san2"></span></div>
+			<div class="col-md-2 subnav2">TOP100榜<span class="hide" id="san2"></div>
+
+			<div class="col-md-1"></div>
+		</div>
+		<!--提示信息-->
+		<div class="container guiall">
+			<div class="row">
+				<p class="time">2018-10-20<span class="t_txt">已更新</span></p>
+				<p class="gui">榜单规则：将昨日国内热映的影片，按照评分从高到低排列取前10名，每天上午10点更新。相关数据来源于“猫眼专业版”及“猫眼电影库”。</p>
+			</div>
+			
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"><img src="../img/xiazai.png" class="first"/></div>
+				<div class="col-md-2">
+					<img src="../img/1.jpg"/>
+				</div>
+				<div class="col-md-6 cont">
+					<div class="cont1">
+						<h1>
+						嗝嗝老师
+						</h1>
+					<p>主演：拉妮·玛克赫吉,内拉吉·卡比,苏普丽雅·皮尔加卡尔</p>
+					<p class="releasetime">上映时间：2018-10-12</p>
+					</div>
+					
+					
+				</div>
+				
+				<div class="col-md-1">
+					<i class="integer">9.1</i>
+				</div>
+				<div class="col-md-1">
+				
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面试题一</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str="abcc";//1122
+			var str2="cabcc"; //31133
+			var str3="aaa";//333
+			function fn(str){
+				var re="";
+				var arr = str.split("");
+				for(var i=0;i<arr.length;i++){
+					var index=0;
+					for(var j=0;j<arr.length;j++){
+						if(arr[i]==arr[j]){
+							index++;
+						}
+					}
+					re=re+index;
+				}
+				console.log(re);
+			}
+			fn(str);
+			fn(str2);
+			fn(str3);
+		</script>
+	</body>
+</html>

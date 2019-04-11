@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签必须放在最前面-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/redian.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../js/redianshouye.js" type="text/javascript" charset="utf-8"></script>
+		<title>热点首页</title>
+	</head>
+
+	<body>
+		<!--导航-->
+		<div class='container-fluid nav_fix'>
+			<div class="row ">
+				<div class="col-md-3 head_nav">
+					<div class="col-md-2"></div>
+					<div class="col-md-6">
+						<img src="../img/log.jpg" class="img-responsive"/>
+					</div>
+					<div class="col-md-3">
+						<!-- Single button -->
+						<div class="btn-group">
+						  <button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	成都<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">定位城市：成都</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">马达加斯加   新奥尔良  </a></li>
+						    <li><a href="#">梁平   上海   </a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">北京</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7 head_nav">
+					<div class="col-md-7">
+						<div class="col-md-2 nav_title nav_first"><a class="nav_a" href="index.html">首页</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="films.html">电影</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="yingyuan.html">影院</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="board.html">榜单</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="redian.html">热点</a></div>
+						<div class="col-md-2 nav_title"></div>
+					</div>
+					<div class="col-md-2 app_download">APP下载<span class="caret"></span></div>
+					<div class="hide sao_sao">
+						<div class="sao_img"></div>
+						<div>扫一扫下载app</div>
+						<span>选座更优惠</span>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group nav_search">
+					      <input type="text" class="form-control" placeholder="Search for movies...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default bg_danger" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-2 head_nav">
+					<div class="btn-group">
+						<button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	头像<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li><a href="#">登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--分导航-->
+		<div class="row subnav">
+			<div class="col-md-4"></div>
+			<div class="col-md-1 subnav1"><a href="#" name="rdsy">热点首页<span class="sp show"></span></a></div>
+			<div class="col-md-1 subnav2"><a href="xinwenzixun.html">新闻资讯<span class="sp hide"></span></a></div>
+			<div class="col-md-1 subnav3"><a href="yugaopian.html">预告片<span class="sp hide"></span></a></div>
+			<div class="col-md-1 subnav4"><a href="jingcaituji.html">精彩图集<span class="sp hide"></span></a></div>
+			<div class="col-md-4"></div>
+		</div>
+		<!--内容-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7" style="width: 790px;margin-bottom: 40px;margin-left: -40px;">
+					<div class="con1_row-1 zxzx">
+						<!--最新资讯-->
+					    <h4 class="h_red" style="color: red;">最新资讯  <a href="#xwzx"> 全部<span class="arrow red-arrow"></span></a></h4>
+					    <div class="row">
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <a href=""><img src="../img/txzs.jpg" alt="..."></a>
+								    <div class="caption">
+									    <p><a href="#"> 终于打破好莱坞片荒场面，《铁血战士》将引爆粉丝提前发福利</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count">545</span>
+								    </div>
+							    </div>
+						    </div>
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <img src="../img/lw.png" alt="...">
+								    <div class="caption">
+									    <p><a href=""> 刘雯近照瘦成纸片人，网友：侧面看真的是一张纸</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count">33</span>
+								    </div>
+							    </div>
+						    </div>
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <img src="../img/ym.png" alt="...">
+								    <div class="caption">
+									    <p><a href="">杨幂《宝贝儿》今日上映，3句台词带你了解这部10月必看电影</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count">1719</span>
+								    </div>
+							    </div>
+						    </div>
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <img src="../img/zyx.jpg" alt="...">
+								    <div class="caption">
+									    <p><a href="">张艺兴三专数字专辑全球同步发行，独立制作M-Pop</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count"> 1267</span>
+								    </div>
+							    </div>
+						    </div>
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <img src="../img/fzqs.jpg" alt="...">
+								    <div class="caption">
+									    <p><a href="">《风再起时》曝光“岁月·爱情”版海报，陆毅袁泉共度浮沉时代</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count">1085</span>
+								    </div>
+							    </div>
+						    </div>
+						    <div class="col-md-4">
+							    <div class="thumbnail">
+								    <img src="../img/ryz.jpg" alt="...">
+								    <div class="caption">
+									    <p><a href="">《如懿传》周迅叩响灵魂之声，如懿心无执念终得自在</a></p>
+									    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+									    <span>猫眼电影</span>
+									    <span class="images-view-count view-count">991</span>
+								    </div>
+							    </div>
+						    </div>
+					    </div>
+					</div>
+					
+					<hr />
+					<div class="con1_row-2" style="margin-top: 30px;">
+						<h4 class="h_blue">预告片速递<a href="#ygp">全部<span class="arrow blue-arrow"></span></a></h4>
+				        <div class="row">
+					        <div class="col-md-8 con1_row-2_left1">
+						        <div class="thumbnail">
+							        <img src="../img/bf.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《冰封侠:时空行者》提档版预告片</p>
+								    	    <span class="video-play-count view-count">864</span>
+								    	    <span class="play-icon1"></span>
+								        </a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-md-4 ">
+						        <div class="thumbnail ">
+							        <img src="../img/mp.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《冒牌搭档》定档预告片 黄金配角苦中作乐（粤语版）</p>
+								    	    <span class="video-play-count view-count">51</span>
+								    	    <span class="play-icon"></span>
+								        </a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-md-4 ">
+						        <div class="thumbnail thumbnail1">
+							        <img src="../img/mp1.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《冒牌搭档》定档预告片 黄金配角苦中作乐</p>
+								    	    <span class="video-play-count view-count">16</span>
+								    	    <span class="play-icon"></span>
+								        </a>
+							        </div>
+						        </div>
+						    </div>
+					        <div class="col-md-4 ">
+						        <div class="thumbnail">
+							        <img src="../img/zjqy.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《摘金奇缘》“误入豪门”版预告片</p>
+								    	    <span class="video-play-count view-count">16</span>
+								    	    <span class="play-icon"></span>
+								        </a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-md-4 ">
+						        <div class="thumbnail">
+							        <img src="../img/lgq.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《两个俏公主》11月10日唯美上映</p>
+								    	    <span class="video-play-count view-count">16</span>
+								    	    <span class="play-icon"></span>
+								        </a>
+							        </div>
+						        </div>
+					        </div>
+					        <div class="col-md-4 ">
+						        <div class="thumbnail">
+							        <img src="../img/htz.jpg" alt="...">
+							        <div class="caption">
+								        <a href=""><p class="p">《胡桃夹子和四个王国》中国终极预告片</p>
+								    	    <span class="video-play-count view-count">16</span>
+								    	    <span class="play-icon"></span>
+								        </a>
+							        </div>
+						        </div>
+					        </div>
+				        </div>
+					</div>
+					<div class="clear"></div>
+			        <div class="zxtj">
+			        	<h4 class="h_org">最新图集<a href="#jctj">全部 <span class="arrow organge-arrow"></span></a></h4>
+					    <div class="row">
+						    <div class="col-md-6" style="width: 395px; height: 241px;">
+						    	<div class="../zxtj_tu" style="height: 183px;">
+						    		<div class="col-md-8">
+							            <div class="thumbnail">
+								            <a href=""><img src="../img/gl1.jpg" alt="..."></a>
+							            </div>
+							        </div>
+							        <div class="col-md-4">
+							            <div class="thumbnail zxtj2">
+							                <img src="../img/gl2.jpg" alt="...">
+							            </div>
+								        <div class="thumbnail">
+								            <img src="../img/gl3.jpg" alt="...">
+								        </div>
+							        </div>
+					    	    </div>
+							    <div class="zxti_zi" style="margin-left: 20px;">
+								    <p class="p1"><a href="">巩俐金九封面诠释时间隽永，与冯海再塑经典</a></p><span class="view-count">4236</span>
+							    </div>
+						    </div>
+						    <div class="col-md-6">
+							    <div class="zxtj_tu" style="height: 183px;">
+						    	    <div class="col-md-8">
+							            <div class="thumbnail">
+								            <img src="../img/gh1.jpg" alt="...">
+								        </div>
+							        </div>
+							        <div class="col-md-4">
+							            <div class="thumbnail">
+								            <img src="../img/gh2.jpg" alt="...">
+								        </div>
+								        <div class="thumbnail">
+								            <img src="../img/gh3.jpg" style="width: 80px; height: 60px;" alt="...">
+								        </div>
+							        </div>
+						        </div>
+							    <div class="zxti_zi"  style="margin-left: 20px;">
+							        <p><a href="">"说唱新秀"郭浩生活写真曝光，眼神犀利酷劲十足</a></p><span class="view-count">4236</span>
+						        </div>
+						    </div>
+						    <div class="col-md-6" style="margin-top: 10px; margin-left: 1px;">
+							    <div class="zxtj_tu" style="height: 183px;">
+						    	<div class="col-md-8">
+							        <div class="thumbnail">
+								        <img src="../img/gl4.jpg" alt="...">
+								    </div>
+							    </div>
+							    <div class="col-md-4">
+							        <div class="thumbnail">
+								        <img src="../img/gl5.jpg" alt="...">
+								    </div>
+								    <div class="thumbnail">
+								        <img src="../img/gl6.jpg" style="width: 80px; height: 60px;" alt="...">
+								    </div>
+							    </div>
+						    </div>
+							    <div class="zxti_zi"  style="margin-left: 20px;">
+							        <p><a href="">巩俐金九封面公布，再现东方光影经典</a></p><span class="view-count">4236</span>
+							    </div>
+						    </div>
+						    <div class="col-md-6" style="margin-left: -1px;">
+							    <div class="zxtj_tu" style="height: 183px;">
+						    	<div class="col-sm-6 col-md-8">
+							        <div class="thumbnail">
+								        <img src="../img/zhl1.jpg" alt="...">
+								    </div>
+							    </div>
+							    <div class="col-md-4">
+							        <div class="thumbnail">
+								        <img src="../img/zhl2.jpg" alt="...">
+								    </div>
+								    <div class="thumbnail">
+								        <img src="../img/zhl3.jpg" alt="...">
+								    </div>
+							    </div>
+						    </div>
+							    <div class="zxti_zi"  style="margin-left: 17px;">
+								    <p><a href="">钟汉良杂志花絮曝光，创意十足令人期待</a></p><span>4236</span>
+							    </div>
+						    </div>
+						</div>
+			        </div>
+				</div>
+				<div class="clear">
+					
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-4" style="width: 418px;position: absolute;top:140px;right: 40px;">
+					<h4 class="h_rmzx">热门资讯</h4>
+					<div style="height: 400px;">
+						<ul class="list-unstyled">
+							<li>
+								<div class="rmzx1">
+									<div class="col-md-3">
+										<a href="">
+											<img src="../img/dhz.jpg" alt="" />
+									        <span class="ranking top-info-icon red-bg">1</span>
+									    </a>
+									</div>
+								    <div class="col-md-8" style="margin-left: 32px; margin-top: 15px;">
+								    	<p><a href="" target="_blank">《大轰炸》取消上映，导演发文向观众道歉：再多的清白都难挡抹黑</a></p>
+								    </div>
+								</div>
+						    </li>
+							<li>
+								<div class="rmzx2">
+									<div class="col-md-1"><span>2</span></div>
+								    <div class="col-md-11"><a href="" target="_blank">粉丝愿望成真！《毒液》一刀未剪！11月9日正式上映</a></div>
+								</div>
+							</li>
+							<li>
+								<div class="rmzx2">
+									<div class="col-md-1"><span>3</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">电影《三国杀·幻》11月9日全国上映！ 看郑伊健突破迷局！</a></p></div>
+								</div>
+							</li>
+							<li>
+								<div class="rmzx2">
+									<div class="col-md-1"><span>4</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">陈可辛《你好，之华》曝人物海报，胡歌一脸胡茬，周迅颜值如少女</a></p></div>
+								</div>
+							</li>
+							<li>
+								<div class="rmzx2">
+									<div class="col-md-1"><span>5</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">男人带娃就是娘炮？媒体人嘲讽007不够爷们，美国队长站出来了</a></p></div>
+								</div>
+							</li>
+							<li>	
+								<div class="rmzx2">
+									<div class="col-md-1"><span>6</span></div>
+								    <div class="col-sm-6 col-md-11"><p><a href="" target="_blank">《河神2》即将开机，男主李现换成了金世佳，其他仍是原班人马</a></p></div>
+								</div>
+							</li>
+							<li>	
+								<div class="rmzx2">
+									<div class="col-md-1"><span>7</span></div>
+								    <div class="col-md-10"><p><a href="" target="_blank">《飓风奇劫》还原真实台风来袭，11.02争夺6亿美金</a></p></div>
+								</div>
+							</li>
+							<li>	
+								<div class="rmzx2">
+									<div class="col-md-1"><span>8</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">55岁李连杰原本拒演《花木兰》，因为女儿的一句话才答应迪士尼</a></p></div>
+								</div>
+							</li>
+							<li>	
+								<div class="rmzx2">
+									<div class="col-md-1"><span>9</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">李连杰带马云见淘宝卖家，笑称“吓坏对方”</a></p></div>
+								</div>
+							</li>
+							<li>	
+								<div class="rmzx2">
+									<div class="col-md-1"><span>10</span></div>
+								    <div class="col-md-11"><p><a href="" target="_blank">【知识贴】埃贡•席勒：死神与少女</a></p></div>
+								</div>
+							</li>	
+						</ul>
+					</div>
+					<h4 class="h_rem">热门预告片</h4>
+					<div class="" style="height: 450px;">
+						<ul class="list-unstyled">
+							<li>
+								<div style="width: 330px; height: 72px; margin-bottom: 15px;">
+									<div>
+										<img src="../img/dhz.jpg"/>
+										<span class="ranking top-info-icon orange1-bg">1</span>
+										<span class="play1-icon"></span>
+									</div>
+									<div class="top5-video-info">
+										<p><a href="" target="_blank">《雪怪大冒险》震惊！曾叱咤演艺圈的主持人现如今生活竟如此苦不堪言</a></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div style="width: 330px; height: 72px; margin-bottom: 15px;">
+									<div>
+										<img src="../img/dhz.jpg"/>
+										<span class="ranking top-info-icon orange2-bg">2</span>
+										<span class="play2-icon"></span>
+									</div>
+									<div class="top5-video-info">
+									    <p><a href="">《我的间谍前男友》“狂飙姐妹”版预告片</a></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div style="width: 330px; height: 72px; margin-bottom: 15px;">
+									<div>
+										<img src="../img/dhz.jpg"/>
+										<span class="ranking top-info-icon orange3-bg">3</span>
+										<span class="play3-icon"></span>
+									</div>
+									<div class="top5-video-info">
+										<p><a href="">《找到你》女人要看男人更要看的电影！这部高口碑大片或成国庆档最大惊喜</a></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div style="width: 330px; height: 72px; margin-bottom: 15px;">
+									<div>
+										<img src="../img/dhz.jpg"/>
+										<span class="ranking top-info-icon grey1-bg">4</span>
+										<span class="play4-icon"></span>
+									</div>
+									<div class="top5-video-info">
+										<p><a href="">《铁血战士》预售开启 打响“好莱坞保护季”头炮</a></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div style="width: 330px; height: 72px; margin-bottom: 15px;">
+									<div>
+										<img src="../img/dhz.jpg"/>
+										<span class="ranking top-info-icon grey2-bg">5</span>
+										<span class="play5-icon"></span>
+									</div>
+									<div class="top5-video-info">
+								        <p><a href="">《宝贝儿》终极版预告片 杨幂郭京飞李鸿其拉开对立阵营</a></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="footer">
+			<p>商务合作邮箱：v@maoyan.com 客服电话：10105335 违法和不良信息举报电话：4006018900</p>
+			<p>投诉举报邮箱：tousujubao@meituan.com 舞弊线索举报邮箱：wubijubao@maoyan.com</p>
+			<p>
+				友情链接 :<a href="http://www.meituan.com" data-query="utm_source=wwwmaoyan" target="_blank">美团网</a>
+				<span></span>
+				<a href="http://www.meituan.com/client" data-query="utm_source=wwwmaoyan" target="_blank">美团下载</a>
+				<span></span>
+				<a href="https://www.huanxi.com" data-query="utm_source=wwwmaoyan_pc" target="_blank">欢喜首映</a>
+				<span></span>
+			</p>
+			<p>©2016 猫眼电影</p>
+			<p>北京猫眼文化传媒有限公司</p>
+		</div>
+		<script type="text/javascript">
+//			($function(){
+//				$(".h_red a").on("click",function (){
+//				    $(".h_red a").children().attr("class","show");
+//				    $(".h_red a").siblings().children().attr("class","hide");
+//				    console.log($(this).children());
+//				    $(".h_red a").css("color","red");
+//			    	$(".h_red a").siblings().css("color","#fff");
+//			    })
+//			})
+			
+		</script>
+	</body>
+
+</html>

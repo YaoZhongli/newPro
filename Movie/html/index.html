@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签必须放在最前面-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<!--<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+	</head>
+	<body>
+		<div class='container-fluid'>
+		<div class='container-fluid nav_fix'>
+			<div class="row ">
+				<div class="col-md-3 head_nav">
+					<div class="col-md-2"></div>
+					<div class="col-md-6">
+						<img src="../img/log.jpg" class="img-responsive"/>
+					</div>
+					<div class="col-md-3">
+						<!-- Single button -->
+						<div class="btn-group">
+						  <button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	成都<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">定位城市：成都</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">马达加斯加   新奥尔良  </a></li>
+						    <li><a href="#">梁平   上海   </a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">北京</a></li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-7 head_nav">
+					<div class="col-md-7">
+						<div class="col-md-2 nav_title nav_first"><a class="nav_a" href="index.html">首页</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="films.html">电影</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="yingyuan.html">影院</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="board.html">榜单</a></div>
+						<div class="col-md-2 nav_title"><a class="nav_a" href="redian.html">热点</a></div>
+						<div class="col-md-2 nav_title"></div>
+					</div>
+					<div class="col-md-2 app_download">APP下载<span class="caret"></span></div>
+					<div class="hide sao_sao">
+						<div class="sao_img"></div>
+						<div>扫一扫下载app</div>
+						<span>选座更优惠</span>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group nav_search">
+					      <input type="text" class="form-control" placeholder="Search for movies...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default bg_danger" type="button"><span class="glyphicon glyphicon-search"></span></button>
+					      </span>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-2 head_nav">
+					<div class="btn-group">
+						<button type="button" class="btn  btn-default  dropdown-toggle nav_btn" data-toggle="dropdown">
+						    	<span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						    <li><a href="denglu.html">登录</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='container-fluid' id="myCarousel">
+			 <!-- 轮播图容器 -->  
+			<div id="carousel-example-generic" class="carousel slide">  
+				<!-- 轮播图上的圆圈链接 -->  
+	            <ul class="carousel-indicators">  
+	                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>  
+	                <li data-target="#carousel-example-generic" data-slide-to="1"></li>  
+	                <li data-target="#carousel-example-generic" data-slide-to="2"></li>  
+	            </ul>  
+			<!-- 轮播图具体内容 -->  
+			<div class="row">
+            <div class="carousel-inner">  
+                <div class="item active">  
+                	<a href="changAn.html"><img  class="img-responsive changAn_event"src="../img/swiper3.jpg"/></a>
+                </div>
+                <div class="item">  
+                	<a href=""><img class="img-responsive" src="../img/swiper2.jpg"/></a>
+                </div>
+                <div class="item">  
+                	<a href=""><img class="img-responsive" src="../img/swiper1.jpg"/></a>
+                </div>
+                <!-- 轮播图上下图切换链接 -->  
+	<!--            <a class="carousel-control left" href="#carousel-example-generic" data-slide="prev" style="position: absolute;top: 0px; line-height: 427px;">&lsaquo;</a>-->
+  				<!--<a class="carousel-control right" href="#carousel-example-generic" data-slide="next" style="position: absolute;top: 0px;line-height: 427px;">&rsaquo;</a> -->
+				<span class="clear"></span>
+				<div class="change_img">
+					<a href="#carousel-example-generic" class="pull-left pn_log" data-slide="prev"><</a>
+					<a href="#carousel-example-generic" class="pull-right pn_log" data-slide="next">></a>
+				</div>
+				<span class="clear"></span>
+            </div>
+            </div>
+	</div>
+	<!--正在热映58部-->
+	<div class='container-fluid show_movie'>
+		<div class="col-md-9">
+			<div class="col-md-1"></div>
+			<div class="col-md-11">
+				<span class="clear"></span>
+				<div>
+					<span class="textcolor_red">正在热映(58部)</span>
+					<span class="textcolor_red more_movie">全部>></span>					
+				</div>
+				<span class="clear"></span>
+				<!--对每个电影布局用栅格系统-->
+				<div></div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/1.jpg"/>
+					<p class="movie_name">悲伤逆流成河</p>
+					<!--这里可以实现跳转到购票页面-->
+					<div class="buy_tickts"><a href="det.html" class="a_style">购票</a></div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<div class="movie_div">
+					<img class="movie_imgs" src="../img/movie1.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="buy_tickts">购票</div>
+				</div>
+				<span class="clear"></span>
+				<div>
+					<span class="textcolor_blue part2_title">即将上映(232部)</span>
+					<span class="textcolor_blue more_movie">全部>></span>					
+				</div>
+				<span class="clear"></span>
+				<!--预售电影-->
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<!--此处跳转到售票页面-->
+						<a href="buyTickts.html" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+				<div class="movie_div movie_div2">
+					<img class="movie_imgs" src="../img/movie2.jpg"/>
+					<p class="movie_name">宝贝儿</p>
+					<div class="want_watch">
+						<span class="wanted">29998人想看</span>
+						<a href="#" class="prev_sale">预售</a>
+					</div>
+					<div class="last_date">
+						<span class="show_date">10月26日上映</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="col-md-11">
+			<div>
+				<span class="clear"></span>
+				<span class="textcolor_red">今日票房</span>
+				<!--这里跳转到榜单页面-->
+				<span class="more_list"><a href="board.html">查看完整榜单>></a></span>
+				<span class="clear"></span>
+			</div>
+			<div class="blank_line"></div>
+			<div>
+				<ol class="list_box">
+					<li id="top_1" style="list-style-type: none;">
+						<img class="top1_img" src="../img/first_movie.jpg"/>
+						<div class="top1_desc">
+							<div class="top1_name"><span>无双</span></div>
+							<sapn class="watch_num">716.66万</sapn>
+						</div>
+					</li>
+					<li class="top_list"><span class="ranking">2</span>找到你 <span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">3</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">4</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">5</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">6</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">7</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">8</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">9</span>找到你<span class="watch_num fr">716.66万</span></li>
+				</ol>
+			  </div>
+			  <!--今日票房盘点-->
+			  <div class="tickets_count">
+			  	<span class="today_tickts">今日盘点</span>
+			  	<span class="right_today">
+				  	<span class="tickts_num">9596.5</span><span class="text_orange">万</span>
+				  	<a  href="professionDatas.html" class="tickts_num more_text">查看更多>></a><br />
+				  	<small class="text_gray">北京时间 20:12:22 猫眼专业版实时票房数据</small>
+			  	</span>
+			  	
+			  </div>
+			  <div  class="top_100 ">
+				<span class="textcolor_red yellow_tex">TOP 100</span>
+				<!--跳转到榜单页面-->
+				<span class="more_list yellow_tex"><a href="board1.html">查看完整榜单>></a></span>
+				<span class="clear"></span>
+			</div>
+			<div>
+				<ol class="list_box">
+					<li id="top_1" style="list-style-type: none;">
+						<img class="top1_img" src="../img/first_movie.jpg"/>
+						<div class="top1_desc">
+							<div class="top1_name"><span>霸王别姬</span></div>
+							<sapn class="watch_num">716.66万</sapn>
+						</div>
+					</li>
+					<li class="top_list"><span class="ranking">2</span>找到你 <span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">3</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">4</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">5</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">6</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">7</span>找到你<span class="watch_num fr">716.66万</span></li>
+					<li class="top_list"><span class="ranking">8</span>找到你<span class="watch_num fr">716.66万</span></li>
+				</ol>
+			  </div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	</div>
+	<!--底部-->
+		<div class="row">
+			<div class="footer">
+			<p>商务合作邮箱：v@maoyan.com 客服电话：10105335 违法和不良信息举报电话：4006018900</p>
+			<p>投诉举报邮箱：tousujubao@meituan.com 舞弊线索举报邮箱：wubijubao@maoyan.com</p>
+			<p>
+				友情链接 :<a href="http://www.meituan.com" data-query="utm_source=wwwmaoyan" target="_blank">美团网</a>
+				<span></span>
+				<a href="http://www.meituan.com/client" data-query="utm_source=wwwmaoyan" target="_blank">美团下载</a>
+				<span></span>
+				<a href="https://www.huanxi.com" data-query="utm_source=wwwmaoyan_pc" target="_blank">欢喜首映</a>
+				<span></span>
+			</p>
+			<p>2016 猫眼电影</p>
+			<p>北京猫眼文化传媒有限公司</p>
+		</div>
+
+		</div>
+
+	    </div>	
+	</body>
+</html>

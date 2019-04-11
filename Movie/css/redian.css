@@ -1,0 +1,389 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	display: block;
+}
+
+/*分导航*/
+.subnav {
+	width: 100%;
+	height: 60px;
+	background-color: #47464a;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	line-height: 60px;
+	position: relative;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.subnav1 a {
+	color: red;
+	text-decoration: none;
+}
+.subnav2 a {
+	color: grey;
+	text-decoration: none;
+}
+.subnav2 a:hover {
+	color: white;
+}
+.subnav3 a {
+	color: grey;
+	text-decoration: none;
+}
+.subnav3 a:hover {
+	color: white;
+}
+.subnav4 a{
+	color: grey;
+	text-decoration: none;
+}
+.subnav4 a:hover {
+	color: white;
+}
+.sp {
+	width: 0px;
+	height: 0px;
+	border: 8px solid transparent;
+	border-bottom-color: white;
+	position: absolute;
+	left: 45px;
+	bottom: 0px;
+}
+/*最新资讯*/
+.zxzx p {
+	color: black;
+}
+.h_red {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.h_red  a {
+	font-size: 14px;
+    color: inherit;
+    float: right;
+    margin-top: 10px;
+}
+.h_red  a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.red-arrow{
+	background: url(../img/jt.png) top no-repeat;
+}
+
+.arrow {
+	display: inline-block;
+    width: 8px;
+    height: 14px;
+    vertical-align: top;
+}
+
+.images-view-count {
+	float: right;
+	color: #aaa;
+}
+/*预告片速递*/
+.h_blue {
+	color: blue;
+	margin-bottom: 25px;
+}
+.h_blue  a {
+	font-size: 14px;
+    color: inherit;
+    float: right;
+    margin-top: 10px;
+}
+.h_blue  a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.blue-arrow {
+	background: url(../img/jt2.png) top no-repeat;
+}
+.con1_row-2_left1 {
+	height: 270px;
+}
+.col-md-7 .con1_row-1 .col-md-4 .thumbnail {
+	height: 184px;
+}
+
+.caption .p{
+	font-size: 14px;
+	margin: -95px 0 8px 10px;
+    color: #fff;
+    font-size: 12px;
+    width: 180px;
+}
+
+.caption a {
+	margin: 5px 3px 3px 3px;
+}
+.caption .video-play-count {
+	bottom: 3px;
+	color: white;
+}
+.caption .play-icon1 {
+    position: absolute;
+    bottom: 5px;
+    right: 35px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/bf1.png) no-repeat;
+    background-size: contain;
+}
+.caption .play-icon {
+    position: absolute;
+    top: 85px;
+    right: 35px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../img/bf1.png) no-repeat;
+    background-size: contain;
+}
+
+div{
+	display: block;
+}
+
+
+.top-info-icon{
+	color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.clear {
+	clear: both;
+}
+	
+
+/*最新图集*/
+.h_org {
+	color: orange;
+	margin-bottom: 25px;
+}
+.h_org  a {
+	font-size: 14px;
+    color: inherit;
+    float: right;
+    margin-top: 10px;
+}
+.h_org  a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.organge-arrow {
+	background: url(../img/jt3.png) top no-repeat;
+}
+.zxyj_tu {
+	height: 183px;
+}
+.zxyj_zi {
+	width: 280px;
+	height: 19px;
+	font-size: 14px;
+	margin-left: 106px;
+}
+.clear {
+	clear: both;
+}
+.col-md-5 {
+	position: absolute;
+	top: 140px;
+	right: 70px;
+}
+.view-count {
+	/*background: url(../img/yan.png);*/
+}
+
+/*热门资讯*/
+.h_rmzx {
+	color: red;
+	margin-top: 35px; 
+	margin-bottom: 20px;
+}
+.rmzx1 {
+	height: 80px;
+}
+.rmzx2 {
+	height: 40px;
+}
+.rmzx2 a{
+	display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+.red-bg {
+	background-color: #ef4238;
+	position: absolute;
+    left: 15px;
+    bottom: 0;
+}
+.clear {
+	clear: both;
+}
+/*热门预告片*/
+.h_rem {
+	color: blue;
+	margin-top: 73px;
+	margin-bottom: 25px;
+}
+.orange1-bg{
+	background-color: #f90;
+	position: absolute;
+    left: 15px;
+    bottom: 378px;
+}
+.orange2-bg{
+	background-color: #f90;
+	position: absolute;
+    left: 15px;
+    bottom: 291px;
+}
+.orange3-bg{
+	background-color: #f90;
+	position: absolute;
+    left: 15px;
+    bottom: 204px;
+}
+.grey1-bg {
+	background-color: #aaa;
+	position: absolute;
+    left: 15px;
+    bottom: 117px;
+}
+.grey2-bg {
+	background-color: #aaa;
+	position: absolute;
+    left: 15px;
+    bottom: 30px;
+}
+.ranking{
+	padding-left: 3px;
+    width: 15px;
+    height: 18px;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 20px;
+}
+
+.top-info-icon {
+	color: #fff;
+    /*position: absolute;
+    left: 0;
+    bottom: 0;*/
+}
+.play1-icon {
+	display: block;
+	background: url(../img/bf1.png) no-repeat;
+	position: absolute;
+    left: 100px;
+    bottom: 384px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+.play2-icon {
+	display: block;
+	background: url(../img/bf1.png) no-repeat;
+	position: absolute;
+    left: 100px;
+    bottom: 299px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+.play3-icon {
+	display: block;
+	background: url(../img/bf1.png) no-repeat;
+	position: absolute;
+    left: 100px;
+    bottom: 212px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+.play4-icon {
+	display: block;
+	background: url(../img/bf1.png) no-repeat;
+	position: absolute;
+    left: 100px;
+    bottom: 125px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+.play5-icon {
+	display: block;
+	background: url(../img/bf1.png) no-repeat;
+	position: absolute;
+    left: 100px;
+    bottom: 38px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+}
+.top5-video-info {
+	float: right;
+    vertical-align: top;
+    width: 224px;
+}
+.top5-video-info p{
+	margin: -68px 35px 10px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a:hover{
+	color: red;
+	text-decoration: none;;
+}
+
+
+/*weibu*/
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    margin: 0 auto;
+    min-width: 1200px;
+    margin-top: 82px;
+}
+
+.footer a {
+	color: red;
+}
+
+.footer p{
+	margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer span{
+	display: inline-block;
+    border-left: 1px solid #444;
+    margin: 0 7px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+}
+

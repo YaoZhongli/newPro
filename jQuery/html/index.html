@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去哪儿网</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="icon" type="image/x-icon" href="../img/favicon.ico" >
+</head>
+<body>
+	<header>
+
+		<ul>
+			<li><span>请&nbsp;<a href="">登录</a>&nbsp;或&nbsp;<a href="">免费注册</a>&nbsp;</span></li>
+			<li>消息</li>
+			<li>查看订单</li>
+			<li>积分商城</li>
+			<li style="border: none;">联系客服</li>
+		</ul>
+		
+		<nav>
+			<img src="../img/logo.png" alt="网站标志">
+			<dt id="navigation">
+				<dl><a href="#">首页</a></dl>
+				<dl><a href="#">机票</a></dl>
+				<dl><a href="#">酒店</a></dl>
+				<dl id="tuangou"><a href="#">团购</a>
+					<!-- <div id="show_list">
+						<span>度假团购</span>
+						<span>酒店团购</span>
+						<span>周边休闲</span>
+						<span>长线游</span>
+					</div> -->
+				</dl>
+				<dl><a href="#">度假</a></dl>
+				<dl><a href="#">门票</a></dl>
+				<dl><a href="#">火车票</a></dl>
+				<dl><a href="#">攻略</a></dl>
+				<dl><a href="#">当地人</a></dl>
+				<dl><a href="#">车车</a></dl>
+				<dl><a href="#">汽车票</a></dl>
+				<dl><a href="#">境外</a></dl>
+				<dl><a href="#">保险</a></dl>
+				<dl><a href="#">金融</a></dl>
+			</dt>
+			<div id="zanzhupic">
+			  <img src="../img/newtag.gif" alt="赞助">
+			</div>
+			<div id="lowprice_pic">
+				<img src="../img/dijia.gif" alt="低价" style="width: 114px;height: 36px;">
+			</div>
+		</nav>	
+	</header>
+	
+	<section class="searchlist">
+		<ul>
+			<li><a href="#">机票</a></li>
+			<li><a href="#">酒店</a></li>
+			<li><a href="#">火车票</a></li>
+			<li><a href="#">度假</a></li>
+			<li><a href="#">门票</a></li>
+			<li><a href="#">团购</a></li>
+			<li><a href="#">车车</a></li>
+			<li><a href="#">自由行</a></li>
+		</ul>
+		<!-- 搜索盒子 -->
+		<div id="searchbox">
+			<input type="radio" name="pname">境内酒店
+			<input type="radio" name="pname">境外港澳台酒店
+			<br>
+		   <div class="blank_search">
+ 			目的地
+ 			<input type="text" placeholder="北京">
+ 		   </div>
+ 		   <div class="blank_search" id="diff">
+ 		   酒店名
+ 			<input type="text" placeholder="酒店名，地标，商圈">
+ 		   </div>
+		</div>
+	</section>
+	<!-- <aside id="asidepic">
+		<img src="../img/book_cover1.jpg" alt="侧边图片">
+	</aside> -->
+	<article>
+	<!-- 今日特惠 -->
+	<div class="price_place">
+		<div class="Title">
+			<ul>
+				<li><a>今日特惠</a></li>
+				<li><a>特惠门票</a></li>
+				<li><a>特惠一日游</a></li>
+			</ul>
+			<span class="more">
+				<a href="#">更多&nbsp;></a>
+			</span>
+		</div>
+		<div class="show_picture">
+			<ul>
+				<li>
+					<img src="../img/place_chengdu.jpg" alt="成都">
+					<div class="pic_produce">
+					<div class="title_produc"><span>成都出发一日游</span></div>
+					  <div class="text_produc">
+                      都江堰+青城山景区一日游（赠川剧变脸秀+川味美食+上门接）
+                 
+                  <em class="price">￥226</em>
+                  </div>
+				 </div>
+				</li>
+				<!-- <li>
+					<img src="../img/qunaer_special.jpg" alt="去哪儿专线">
+					<div class="pic_produce">
+					<div class="title_produc pic2"><span>成都出发一日游</span></div>
+					  <div class="text_produc">
+                      <div class="onSale-body-left-words-content">
+                【去哪儿专线】熊猫基地都江堰1日（VIP小团+赠川剧火锅劵）
+                  <em class="price">￥228</em>
+                  </div>
+				 </div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+		<!-- 轮播图 -->
+		<div id="sowingmap">
+			<ul id="ul">
+				<li>
+				<input type="radio" id="one"  name="select" checked>
+					<img src="../img/sowingmap1.jpg" >				 
+				</li>
+				<li>
+					<input type="radio" id="two" name="select" >
+					<img src="../img/sowingmap2.jpg">				
+				</li>
+				<li>
+					<input type="radio" id="three" name="select" >
+					<img src="../img/sowingmap3.jpg" >
+				</li>
+				<li>
+					<input type="radio" id="four" name="select" >
+					<img src="../img/sowingmap4.jpg" >
+				</li>
+				<li>
+					<input type="radio" id="five" name="select" >
+					<img src="../img/sowingmap5.jpg" >
+				</li>
+			</ul>
+			<ol>
+				<li><label for="one"></label></li>
+				<li><label for="two"></li>
+				<li><label for="three"></li>
+				<li><label for="four"></li>
+				<li><label for="five"></li>
+			</ol>
+        </div>
+
+		</div>
+		<!-- 旅游攻略 -->
+		<div id="trip_plan">
+			<!-- 标题部分 -->
+			<div class="Title">
+				<h3>旅行攻略</h3>
+				<p>你的旅行指南针</p>
+				<!-- 背景图片 -->
+				<a href="#"><span>创建行程</span></a>
+				<a href="#"><span>发表游记</span></a>
+			</div>
+			<!-- 二级导航栏 -->
+			<div class="nav_last">
+				<ul>
+					<li>最新精华游记</li>
+					<li>花开一夏</li>
+					<li>仙境在人间</li>
+				</ul>
+				<span class="more">
+					<a href="#">更多&nbsp;></a>
+				</span>
+			</div>
+			<!-- 旅行攻略的图片区域 -->
+			<div id="trip_picture">
+			   <div id="content">
+				<img src="../img/tripplan_pic1.jpg" alt="去哪" >
+				<div class="float_title">
+ 					<p>不一样的大理玩给你看！周边自驾+摄影指南</p>
+ 					<a href="#">李泽言</a>
+ 					<span>|</span>
+ 					<span>2018-05-05出发</span>
+ 					<br>
+ 					<span>共八天</span>
+ 					<span>|</span>
+ 					<span>99张照片</span>
+				</div>
+			  </div>
+			</div>
+			<footer>
+				<p>国内热门目的地</p>
+				<ul>
+					<li>乌镇：<a href="#">梦里水乡，情怀乌镇</a></li>
+					
+					<li>&nbsp;&nbsp;&nbsp;桂林：<a href="#">依山傍水，且听且吟</a></li>
+					<li>香格里拉:<a href="#">彩云之南，心中净土</a></li>
+					<li>西双版纳：<a href="#">北回归线的一抹绿</a></li>
+				</ul>
+				<!-- 旅行攻略右下部分 -->
+				<div id="right_footer">
+					<p>海外热门目的地</p>
+					<ul>
+						<li>棉花堡：<a href="#">星罗棋布的奇幻之旅</a></li>
+
+						<li>&nbsp;&nbsp;&nbsp;格鲁吉亚：<a href="#">葡萄与美酒的故乡</a></li>
+						<li>新加坡:<a href="#">花园狮城，醉美南洋</a></li>
+						<li>冲绳：<a href="#">极目见琉球，远瞻海似杯</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<div id="lvtubook">
+			<!-- 骆驼书的标题部分 -->
+			<div class="Title" id="books_title">
+				<h3>骆驼书</h3>
+				<p>读骆驼书，行万里路</p>		
+			</div>
+			<!-- 二级导航栏 -->
+			<div class="nav_last" id="nav_books">
+				<ul>
+					<li>专题</li>
+					<li>亚洲</li>
+					<li>欧洲</li>
+					<li>北美洲</li>
+					<li>大洋洲</li>
+				</ul>
+				<span class="more">
+					<a href="#">更多&nbsp;></a>
+				</span>
+			</div>
+			<!-- 骆驼书图片 -->
+			<div id="books_pic">
+				<img src="../img/books01.jpg" alt="书面" width=208px height=339px>
+				<img src="../img/book_cover1.jpg" alt="封面1" width=240px height=339px>
+
+				<img src="../img/book_cover2.jpg" alt="封面2" width=240px height=339px>
+
+				<div id="content2">
+					<img src="../img/book_cover3.jpg" alt="封面3" width=240px height=339px>
+					<div id="show1">
+						<h3>幸福民宿</h3>
+						<h3> Shopping in Seoul</h3>
+						<div id="bar"></div>
+							<p>作者：修菱 冷钢</p>
+							<p>更新时间: 2015-01-20</p>
+							<span>下&nbsp;载</span>
+					</div>
+				</div>
+			</div>
+	</article>
+	<footer>
+		<div id="app_foot">
+           <img src="../img/app_footer.jpg" alt="底部app下载" >
+		</div>
+		<div id="declare">
+			<dl>
+				<dt>酒店</dt>
+				<dd><a href="#">九寨黄龙机场附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+				<dd><a href="#">九寨风景区附</a></dd>
+			</dl>
+			<dl>
+				<dt>攻略</dt>
+				<dd><a href="#">巴厘岛旅游攻略</a></dd>
+				<dd><a href="#">巴厘岛旅游攻略</a></dd>
+				<dd><a href="#">巴厘岛旅游攻略</a></dd>
+			</dl>
+
+			<div id="last_footer">
+				<a href="#">关于qunar</a>
+				<span>|</span>
+				<a href="#">酒店分销商加盟</a>
+				<span>|</span>
+				<a href="#">业务合作</a>
+				<span>|</span>
+				<a href="#">加入我们</a>
+				<span>|</span>
+				<a href="#">“严重违规失信”专项整治举报</a>
+				<span>|</span>
+				<a href="#">安全中心</a>
+				<span>|</span>
+				<a href="#">星骆驼公益</a>
+				<span>|</span>
+				<a href="#">About Us</a>
+				<br>
+				<span>Copyright &copy;2018 Qunar.com</span><span>京公网安备110108901530</span>
+				<a href="#" target="_blank" >京ICP备05021087号</a>
+				<a href="#" target="_blank"  营业执照信息</a>
+					<a href="#" target="_blank"  >保险经纪资质</a>
+					<a href="#" target="_blank"  >(京)-非经营性-2016-0110</a>
+					<span class="s24">去哪儿网客服电话95117
+					</span>
+				</div>
+			</div>
+		
+		
+			<div class="f_imglist">
+     			<ul>
+     				<li>
+     					<a href="#" target="_blank" rel="nofollow">
+     					<img src="../img/footer1.gif" height="30" />
+     					</a>
+     				</li>
+     				<li class="f_icon_pci">
+     					<a href="#" title="去哪儿网通过PCI认证">
+     					<img src="../img/footer2.png" height="30" />
+     					</a>
+     				</li>
+     				<li class="f_icon_itrust">
+     					<a href="#" target="_blank" rel="nofollow" title="信用编码：1786892425">
+     					<img src="../img/footer3.png" height="30" />
+     					</a>
+     				</li>
+     				<li class="f_icon_beian">
+     					<a href="#" target="_blank" rel="nofollow" title="经营性网站备案信息">
+     					<img src="../img/footer4.png" height="30" /></a>
+     				</li>
+     				<li class="f_icon_cnnic">
+     					<a href="#" target="_blank" rel="nofollow" title="可信网站身份验证">
+							<img src="../img/footer5.png" height="30" />
+     					</a>
+     				</li>
+     			</ul>
+     		</div>
+	</footer>
+</body>
+</html>

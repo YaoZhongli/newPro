@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面试题3</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function fm(num){
+//				console.log(num);
+//				return {fn:fm}//返回的整个是一个对象，对象中有方法fn，其值为fm
+//			}
+//			fm(100).fn(200)
+			function fm(num){
+				function fn(){
+					console.log(num);//当前作用域内找不到，会去上一层的作用域找num
+				}
+				fn(100);
+				console.log(num);
+			}
+			fm(200);
+		</script>
+	</body>
+</html>

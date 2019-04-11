@@ -1,0 +1,412 @@
+.head_nav{
+	height: 80px;
+}
+.nav_fix{
+	position: fixed;
+	height: 80px;
+	background-color: white;
+	z-index: 1000;
+}
+.nav_btn{
+	background-color: white;
+	border: none;
+	width: 50px;
+	font-size: 18px;
+	height: 80px;
+}
+.nav_btn:hover, .nav_btn:link{
+	background-color: white;
+	border: none;
+}
+.bg_danger{
+	background-color: red;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+.sao_sao{
+	width: 100px;
+	height: 130px;
+	position: absolute;
+	top: 60px;
+	right: 220px;
+	z-index: 1000;
+	background-color: white;
+}
+.sao_img{
+	width: 60px;
+	height: 60px;
+	background-color: lightseagreen;
+	margin: 10px auto;
+}
+.sao_sao>span{
+	display: block;
+	text-align: center;
+	color: darkgray;
+}
+.nav_search{
+	margin-top: 20px;
+}
+/*.nav_title:hover{
+	color: #fff;
+    background-color: #ef4238;
+}*/
+
+.nav_title{
+	text-align: center;
+    line-height: 80px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*.nav_title>a:hover{
+	text-decoration: none;
+	color: #fff;;
+}*/
+.app_download{
+	text-align: center;
+    line-height: 80px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.caret1{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 36px;
+	left: 100px;
+	border-left: 4px solid transparent;
+	border-bottom: 4px solid black;
+	border-right: 4px solid transparent;
+}
+a{
+	color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+.a_style{
+	color:#ef4238;
+}
+ /*调整容器大小*/  
+ 
+/*调整圆圈链接ol位置*/  
+/*.carousel-indicators {  
+   bottom: -5px;  
+	z-index: 1000;
+}  */
+/*调整轮播图位置*/  
+#carousel-example-generic {  
+	
+} 
+#myCarousel{
+	position: absolute;
+	top: 300px;
+} 
+/*调整上一张下一张*/
+.pn_log {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 1000px;
+	
+}
+
+/*.glyphicon {
+	position: relative;
+	top: -188px;
+	left: 2px;
+}*/
+#prev_log:hover{
+	list-style-type: none;
+}
+.show_movie{
+	
+}
+.movie_imgs{
+	width: 160px;
+	height: 220px;
+}
+.change_img>a{
+	font-size: 24px;
+	position: relative;
+	top: -220px;
+	display: inline-flex;
+	width: 30px;
+	height: 60px;
+	line-height: 60px;
+	opacity: 0.6;
+	background-color: darkgray;
+}
+.change_img>a:link{
+	text-decoration: none;
+}
+.change_img>a:visited{
+	text-decoration: none;
+}
+.movie_div{
+	width: 161px;
+	height: 259px;
+	margin-bottom: 40px;
+	margin-right: 30px;
+	position: relative;
+	border: 1px solid gray;
+	display: inline-block;
+}
+.movie_name{
+	position: absolute;
+	left: 6px;
+	top: 200px;
+	font-size: 16px;
+	color: white;
+    line-height: 22px;
+    display: block;
+    overflow: hidden;
+}
+.buy_tickts{
+	width: 160px;
+	height: 39px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 39px;
+	color: #ef4238;
+}
+/*.buy_tickts a{
+	color: #ef4238;
+}*/
+/*.buy_tickts>a:hover{
+	color: white;
+	text-decoration: none;
+}*/
+.buy_tickts:hover{
+	background-color: #ef4238;
+	color: white;
+}
+.textcolor_red{
+	font-size: 26px;
+	line-height: 26px;
+	color: #ef4238!important;
+}
+.more_movie{
+	font-size: 14px;
+    line-height: 16px;
+	margin-right: 50px; 
+	float: right;   
+}
+.clear{
+	clear: both;
+}
+.blank_line{
+	width: 100%;
+	height: 20px;
+}
+#top_1{
+	height: 78px;
+}
+.top1_img{
+	height: 78px;
+	width: 128px;
+	display: inline-block;
+}
+.top_list{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+    color: #333;
+    display: block;
+    cursor: pointer;
+}
+.list_box{
+	padding: 0px;
+	display: block;
+}
+.top1_desc{
+	display: inline-block;
+}
+.top1_name{
+    padding: 0;
+	font-size: 18px;
+    color: #333;
+  	line-height: 18px;
+}
+.watch_num{
+	font-size: 14px;
+	display: inline-block;
+	width: 70px;
+    height: 35px;
+	color: #ef4238;
+	line-height: 35px;
+}
+.fr{
+	float: right;
+}
+.today_num{
+	height: 100px;
+	margin-top: 29px;
+	background-color: #fdfdfd;
+	border: 1px solid #efefef;
+}
+.today_title{
+	display: inline-block;
+	width: 20px;
+	height: 100px;
+}
+.today_num{
+	/*display: inline-block;*/
+	/*height: 100px;*/
+	/*width: 200px;*/
+	color: color: #ef4238;  
+	font-size: 30px;
+    font-weight: 700;
+}
+.top_100{
+	margin-top: 100px;
+}
+.yellow_tex{
+	color: #ffb400!important;
+}
+.more_list{
+	float: right;
+	color: #ef4238;
+	font-size: 14px;
+    line-height: 16px;
+}
+.ranking{
+	display: inline-block;
+    width: 20px;
+    height: 30px;
+    color: #999;
+	font-style: italic;
+	font-size: 24px;
+	line-height: 18px;
+}
+.tickets_count{
+	width: 320px;
+	height: 105px;
+	margin-top: 28px;
+	border: 1px solid darkgray;
+}
+.today_tickts{
+	display: inline-block;
+	width: 35px;
+	height: 100%;
+	text-align: center;
+	background-color: #ef4238;
+	font-size: 18px;
+	color: white;
+}
+.right_today{
+	display: inline-block;
+	position: relative;
+	top: -40px;
+	left: 4px;
+}
+.tickts_num{
+	font-weight: 600;
+	font-size: 18px;
+	color: #ef4238;
+}
+.word_size{
+	font-size: 16px;
+}
+.text_orange{
+	color: #ef4238;
+}
+.more_text{
+	display: inline-block;
+	margin-left: 30px;
+}
+.more_text:hover{
+	color: #ef4238;
+}
+.textcolor_blue{
+	color: #2d98f3!important;
+}
+.part2_title{
+	font-size: 26px;
+}
+.movie_div2{
+	height: 300px;
+	margin-top: 10px;
+}
+.want_watch{
+	width: 160px;
+	height: 39px;
+}
+.wanted{
+	display: inline-block;
+	height: 30px;
+	width: 100px;
+	color: #999;
+    font-size: 14px;
+}
+.prev_sale{
+	display: inline-block;
+	height: 39px;
+	width: 59px;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 0px;
+	margin-left: -4px;
+	text-decoration: none;
+	line-height: 39px;
+	text-align: center;
+	color: #2D98F3;
+}
+.prev_sale:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #2D98F3;
+}
+.last_date{
+	text-align: center;
+}
+.show_date{
+	border: none;
+    color: #999;
+    font-size: 14px;
+    line-height: 40px;
+}
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    margin: 0 auto;
+    min-width: 1200px;
+    /*margin-top: 82px;*/
+}
+.footer {
+	color: #666;
+	background-color: #262426;
+    padding: 56px 0;
+    min-width: 1200px;
+   position: relative;
+   top: 60px;
+}
+
+.footer a {
+	color: red;
+}
+
+.footer p{
+	margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer span{
+	display: inline-block;
+    border-left: 1px solid #444;
+    margin: 0 7px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+}
+
+

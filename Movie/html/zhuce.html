@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册|猫眼电影</title>
+	<link rel="stylesheet" href="../css/denglu.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<div class="zcheader">
+		<a class="zclogo"></a>
+	</div>
+
+	<div class="zczb"> 
+		<form action="" method="post">
+			<div class="zcbdk">
+				<label >手机号</label>
+
+				<input type="text" style="position: relative; left: 10px" id="zcz">
+				<div class="zcts" style="display:block; " id="zczc">注册成功后，全美团通用</div>
+				<div class="zcts" style="display:none; " id="zczs">
+					<div class="jg"></div>
+					请输入您的手机号</div>
+				</div>
+
+				<div class="zcbdk" style="padding: 1px;">
+					<div class="zcbdkx">免费获取短信动态码</div>
+				</div>
+				<div class="zcbdk">
+					<label>短信动态码</label>
+					<input type="text" id="zcz1">
+					<div class="zcts" style="display:block;" id="zczc1"></div>
+					<div class="zcts" style="display:none;" id="zczs1">
+						<div class="jg"></div>
+						请输入短息动态码</div>
+					</div>
+					<div class="zcbdk">
+						<label>创建密码</label>
+						<input type="password" id="zcz2">
+						<div class="zcts" style="display:block;" id="zczc2"></div>
+						<div class="zcts" style="display:none;" id="zczs2">	
+						<div class="jg"></div>
+							请填写密码</div>
+						</div>
+                      <div class="zcbdk" style="padding: 0px;">
+                      <div class="zcbdyz">弱</div>
+                      <div class="zcbdyz">中</div>
+                      <div class="zcbdyz">强</div>
+                      </div>
+						<div class="zcbdk">
+							<label>确认密码</label>
+							<input type="password" id="zcz3">
+							<div class="zcts" style="display:block;" id="zczc3"></div>
+							<div class="zcts" style="display:none;" id="zczs3">
+								<div class="jg"></div>
+								请再次输入密码</div>
+							</div>
+
+							<div class="zcbdk" style="position: relative; left: 50px"><button type="submit" class="dlan">同意以下协议并注册</button></div>
+						</form>
+					</div>
+				</div>
+
+
+				<div class="di">
+					<p>
+						©2018 <a href="http://meituan.com/" style="color: #666;">美团网团购</a> meituan.com 京ICP证070791号 京公网安备11010502025545号 
+					</p></div>
+
+
+					<script>
+
+					  
+
+                       $("#zcz").click(function(){
+                        console.log("点击获取手机主框");
+                        if($("#zcz").val()==""){
+                        $("#zczc").attr('style','display: none;')
+                        $("#zczs").attr('style','display: block;')
+                        return false;  
+                   }else{
+                   	    $("#zczc").attr('style','display: block;')
+                        $("#zczs").attr('style','display: none;')
+                        return true;  
+                   }
+                 })
+
+                       $("#zcz1").click(function(){
+                        console.log("点击获取手机主框1");
+                        if($("#zcz1").val()==""){
+                        $("#zczc1").attr('style','display: none;')
+                        $("#zczs1").attr('style','display: block;')
+                        return false;  
+                   }else{
+                   	    $("#zczc1").attr('style','display: block;')
+                        $("#zczs1").attr('style','display: none;')
+                        return true;  
+                   }
+                 })
+
+                       $("#zcz2").click(function(){
+                        console.log("点击获取手机主框2");
+                        if($("#zcz2").val()==""){
+                        $("#zczc2").attr('style','display: none;')
+                        $("#zczs2").attr('style','display: block;')
+                        return false;  
+                   }else{
+                   	    $("#zczc2").attr('style','display: block;')
+                        $("#zczs2").attr('style','display: none;')
+                        return true;  
+                   }
+                 })
+                       $("#zcz3").click(function(){
+                        console.log("点击获取手机主框3");
+                        if($("#zcz3").val()==""){
+                        $("#zczc3").attr('style','display: none;')
+                        $("#zczs3").attr('style','display: block;')
+                        return false;  
+                   }else{
+                   	    $("#zczc3").attr('style','display: block;')
+                        $("#zczs3").attr('style','display: none;')
+                        return true;  
+                   }
+                 })
+
+                       
+                   var reg1 = /(^\d{6,}$)|(^[a-zA-Z]{6,}$)|(^[^a-zA-Z0-9]{6,}$)/; //数字，字母或符号其中的一种
+                   var reg7 = /\d*\D*((\d+[a-zA-Z]+[^0-9a-zA-Z]+)|(\d+[^0-9a-zA-Z]+[a-zA-Z]+)|([a-zA-Z]+\d+[^0-9a-zA-Z]+)|([a-zA-Z]+[^0-9a-zA-Z]+\d+)|([^0-9a-zA-Z]+[a-zA-Z]+\d+)|([^0-9a-zA-Z]+\d+[a-zA-Z]+))\d*\D*/; //数字字母字符任意组合
+        function check_pwd() {
+            var pwd = ("#zcz2");
+            if (pwd.length < 6) {
+                $("#pwdPrompt div:eq(1)").html("密码长度不能小于6位");
+                return false;
+            } else {
+                $("#pwdPrompt div:eq(1)").css("display", "none");
+                $("#pwdPrompt div:eq(0)").css("display", "block");
+                if (reg1.test(pwd)) {
+                    $("#pwdLength span:eq(0)").css("display", "block");
+                    $("#pwdLength span:eq(1)").css("display", "none");
+                    $("#pwdLength span:eq(2)").css("display", "none");
+                    return true;
+                }
+                else if (!reg7.test(pwd)) {
+                    $("#pwdLength span:eq(0)").css("display", "block");
+                    $("#pwdLength span:eq(1)").css("display", "block");
+                    $("#pwdLength span:eq(2)").css("display", "none");
+                    return true;
+                }
+                else {
+                    $("#pwdLength span:eq(0)").css("display", "block");
+                    $("#pwdLength span:eq(1)").css("display", "block");
+                    $("#pwdLength span:eq(2)").css("display", "block");
+                    return true;
+                }
+                return true;
+            }
+        }
+                    
+					</script>
+				</body>
+				</html>
