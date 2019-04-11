@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>水波纹</title>
+		<style type="text/css">
+			.mybox1{
+				background-color: crimson;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+		
+			var bigbox = document.getElementsByTagName("body")[0];
+			window.onclick = function(e){
+				var mybox = document.createElement("div");
+				mybox.classList.add("mybox1");
+				mybox.style.left = e.pageX - 50 + "px";
+				mybox.style.top = e.pageY -50 + "px";
+				mybox.style.transform = "scale(0,0)";
+				var scale = 0;
+				var op = 1;
+				var timer = setInterval(function(){
+					scale+=0.01;
+					op-=0.01;
+					mybox.style.transform = "scale("+scale+","+scale+")";
+					mybox.style.opacity = op;
+					if(scale>=1){
+						clearInterval(timer);
+					}
+				},1);
+				bigbox.appendChild(mybox);
+				
+				
+			};
+		</script>
+	</body>
+</html>

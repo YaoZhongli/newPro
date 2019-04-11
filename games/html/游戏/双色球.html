@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>双色球</title>
+		<style type="text/css">
+			#box{
+				margin-top: 50px;
+				display: flex;/*设置弹性盒子*/
+				justify-content: space-around;/*使得盒子中的内容均匀分布在页面中*/
+			}
+			#box>div{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				border: 1px solid red;
+				color: red;
+				/*float: left;*/   /*由于设置了弹性盒子,因此不用设置左浮动了*/
+				/*margin-left: 50px ;
+				margin-right: 50px;*/
+				font-size: 30px;
+				font-weight: normal;
+				text-align: center;
+				line-height: 80px;
+			}
+			#box>div:last-child{
+				border: 1px solid blue;
+				color: blue;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" >
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var bluebox = box.children[6];
+			console.log(bluebox);
+			var blueNum =0;
+//			外层函数负责蓝色球里的数字显示
+			var setblue = setInterval(function(){
+				var buleRandom = parseInt(Math.random()*14)+1;
+				bluebox.innerText = buleRandom;
+				blueNum++;
+				if(blueNum==15){
+					clearInterval(setblue);
+					var redTime = 0;//一个红球中数字滚动的次数
+					var redindex = 0;//红球的下标
+					//当蓝色球中的数滚动完了15回后，再开始滚动红色球里面的数字
+					var setred = setInterval(function(){
+						//出去蓝色的球之外，红色的球下标
+						if(redindex>box.children.length-2){
+							clearInterval(setred);
+						}else{
+							var num = parseInt(Math.random()*31)+1;
+							 box.children[redindex].innerText=num;
+							 redTime++;
+							 if(redTime == 15){
+							 	redindex++;
+							 	redTime = 0;
+							 }
+						}
+						
+					},78);
+				}
+			},78);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抽奖游戏</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#bigbox{
+				width: 1200px;
+				height: 418px;
+				background-color: black;
+				margin: 0 auto;
+				color: white;
+				font-size: 60px;
+				font-weight: 900px;
+				line-height: 418px;
+				text-align: center;
+			}
+			#controller{
+				width: 1200px;
+				height: 100px;
+				margin-top: 130px;
+				text-align: center;
+			}
+			#controller button{
+				width: 180px;
+				height: 50px;
+				border: none;
+				background-color: purple;
+				font-size: 30px;
+				color: wheat;
+				font-weight: 900;
+				margin-right: 100px;
+				margin-left: 100px;
+			}
+			#promptBox{
+				width: 500px;
+				height: 309px;
+				background-color: lightpink;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				transform: scale(0,0);
+				color: red;
+				font-size: 30px;
+				font-weight: 400;
+				text-align: center;
+				line-height: 309px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bigbox">0</div>
+		<div id="controller">
+			<button>开始抽奖</button>
+			<button>结束游戏</button>
+		</div>
+		<div id="promptBox"></div>
+		<script>
+			var bigbox = document.getElementById("bigbox");
+			var controller = document.getElementById("controller");
+			var start = controller.firstElementChild;
+			var end = controller.lastElementChild;
+			var prompt = document.getElementById("promptBox");
+			var timer;
+			var arr = ["唱歌","学猫叫","真心话","大冒险","跳舞","讲笑话"];
+			
+			function behavior(arr){
+				return arr[Math.floor(Math.random()*arr.length)];
+			}
+			start.onclick = function(){
+				clearInterval(timer);
+				 timer = setInterval(function(){
+			     var random = parseInt(Math.random()*32);
+					console.log(random);
+					bigbox.innerText = random;
+				},1);
+				prompt.style.transform = "scale(0,0)";
+			};
+			
+			end.onclick = function(){
+				clearInterval(timer);
+				var scale = 0;
+				var behav = behavior(arr);
+				var timer2 = setInterval(function(){
+					scale+=0.01;
+					prompt.style.transform = "scale("+scale+","+scale+")";
+					if(scale>=1){
+						clearInterval(timer2);
+					}
+					
+				},1);
+				prompt.innerText = "有请"+" '"+bigbox.innerText+"' " + "号同学开始"+" '"+behav+"' "+"!!";
+				
+			};
+		</script>
+	</body>
+</html

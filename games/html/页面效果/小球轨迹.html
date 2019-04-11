@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小球轨迹</title>
+		<style type="text/css">
+			.bgbox{
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<!--书写程序代码制作一个小球，让小球的运动轨迹为抛物线，
+		并且在落下的过程当中随机改变浏览器的背景颜色，到达底部的时候呈现雨滴滴落地面的动画-->
+		<div class="bgbox"></div>
+		<script type="text/javascript">
+			var bgbox = document.getElementsByClassName("bgbox")[0];
+			bgbox.style.width = parseInt(window.innerWidth)-20+'px';
+			bgbox.style.height = parseInt(window.innerHeight)-20+'px';
+			bgbox.style.backgroundColor = "mediumseagreen";
+			var ball = document.createElement("div");
+			ball.style.width = "80px";
+			ball.style.height = "80px";
+			ball.style.borderRadius = "50%";
+			ball.style.backgroundColor = "yellow";
+			ball.style.position = "absolute";
+			ball.style.top ="0px";
+			ball.style.left = "0px";
+			bgbox.appendChild(ball);
+			var v=20;
+			var t=0;
+			var g=10;
+			function Ball(){
+				var bg_width = parseInt(bgbox.style.width);
+				console.log(bg_width);
+				var bg_height = parseInt(bgbox.style.height);
+				console.log(bg_height);
+
+//				var scales = 1;
+				
+//				var y=bg_height-40;//781
+//				console.log(y);
+//				var t= parseInt(Math.sqrt(2*y/g));
+//				console.log(t);
+//				var x=v*t;
+//				console.log(x);//600
+				var setmove = setInterval(function(e){
+					t+=0.1;
+					var ball_left = parseInt(ball.style.left);
+					var ball_top = parseInt(ball.style.top);
+					
+					if(ball_top>=window.innerHeight-200){//ball_left>=bg_width-280 || 
+						//设置落地的样式
+						ball.style.transform = "scale(5,1)";
+						var scaleX = 5;
+						var scaleY = 1;
+						var op=1;
+						
+						var setbottom = setInterval(function(){
+							op-=0.1;
+							scaleX-=0.03;
+							scaleY-=0.08;
+							ball.style.transform = "scale("+scaleX+","+scaleY+")";
+							ball.style.opacity = op;
+							if(op<=0){
+								clearInterval(setbottom);
+								ball.parentNode.removeChild(ball);
+							}
+						},100);
+					  }else{
+					  	ball.style.left = ball_left +v*t+'px';
+						ball.style.top = ball_top + g*t*t/2+'px';
+					  }
+					},100);
+			}
+			Ball();
+		</script>
+	</body>
+</html>

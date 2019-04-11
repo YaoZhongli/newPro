@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>彩虹雨</title>
+		<style type="text/css">
+			.box{
+				background-color: #000000;
+				position: relative;
+				overflow: hidden;
+			}	
+			.box2{
+				width: 300px;
+				height: 60px;
+				border: 1px solid black;
+				background-color: black;
+				position: absolute;
+			    left: 980px;
+				top: 5px;
+				font-size: 30px;
+				font-weight: 600;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<div class="box2"></div>
+		</div>
+		<script>
+			window.onload = function(){
+				var arr =["好","好","学","习"];
+				var box = document.getElementsByClassName("box")[0];
+				var box2 = document.getElementsByClassName("box2")[0];
+
+			    
+				var speeda =10;
+				console.log(window.innerWidth);//浏览器可见区域的宽度、高度
+				console.log(window.innerHeight);
+				box.style.width = window.innerWidth-20+'px';
+				box.style.height = window.innerHeight-20+'px';
+				var k=0;
+				var setrain = setInterval (function(){
+					var rain = document.createElement("div");
+					var colorone = parseInt(Math.random()*256);
+					var colortwo = parseInt(Math.random()*256);
+					var colorthree = parseInt(Math.random()*256);
+					
+					rain.style.backgroundColor = 'rgb('+colorone+','+colortwo +','+colorthree+')';
+					rain.style.width = '3px';
+					rain.style.height = '20px';
+					rain.style.borderRadius ='50%';
+					rain.style.position = 'absolute';
+					rain.style.top = 0;
+					rain.style.left = parseInt(Math.random()*window.innerWidth)-20+'px';
+					box.appendChild(rain);
+					var t=0;
+					var moveset = setInterval(function(){
+						var top = parseInt(rain.style.top);
+						t+=0.3;
+						if(top>=window.innerHeight-200){
+							clearInterval(moveset);
+							rain.style.transform = "scale(5,1)";
+							var scalex = 5;
+							var scaley = 1;
+							var op = 1;
+							var setbottom = setInterval(function(){
+								scalex+=0.09;
+								scaley-=0.02;
+								op-=0.01;
+								rain.style.transform = "scale("+scalex+","+scaley+")";
+								rain.style.opacity = op;
+								if(op<=0){
+									clearInterval(setbottom);
+									rain.parentNode.childNodes.remove(rain);
+								}
+							},1);
+							
+						}else{
+							rain.style.top =speeda*t*t/2+'px';
+						}
+					},50);
+				},100);
+				var setfont = setInterval(function(){
+					var wordbox = document.createElement("div");
+					var rain = document.createElement("div");
+					var colorone = parseInt(Math.random()*256);
+					var colortwo = parseInt(Math.random()*256);
+					var colorthree = parseInt(Math.random()*256);
+					wordbox.style.color = 'rgb('+colorone+','+colortwo +','+colorthree+')';
+					wordbox.style.backgroundColor = "black";
+					
+					
+					wordbox.innerText = arr[k];
+					box2.appendChild(wordbox);
+					k++;
+					if(k>=arr.length){
+							clearInterval(setfont);
+						}
+				},1000);
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圆圆彩虹</title>
+		<style type="text/css">
+			.mid_ball{
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				position:relative;
+				top: 600px;
+				left: 600px;
+				background-color: royalblue;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mid_ball"></div>
+		<script type="text/javascript">
+			var deg=180;
+			var r = 360;
+			var colorarr = ["purple","blue","green","yellow","orange","red"];
+			var mid_ball = document.getElementsByClassName("mid_ball")[0];
+			var bodybox = document.getElementsByTagName("body")[0];
+//			
+				var timer = setInterval(function(){
+				deg++;
+				for(var i=0;i<7;i++){
+					var parts = document.createElement("div");
+					parts.style.width = "18px";
+					parts.style.height = "18px";
+					parts.style.backgroundColor = colorarr[i];
+					parts.style.left = Math.cos(deg*Math.PI/180)*(r+i*18)+600+5+'px';
+					parts.style.top = Math.sin(deg*Math.PI/180)*(r+i*18)+600+5+'px';
+					parts.style.position = "absolute";
+					bodybox.appendChild(parts);
+				}
+//				parts.style.borderRadius = "50%";
+				if(deg>360){
+					clearInterval(timer);
+				    }
+				
+			    },1);
+//			}
+			
+		</script>
+	</body>
+</html>

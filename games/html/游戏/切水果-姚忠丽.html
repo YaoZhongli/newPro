@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				background-color: #000000;
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div><!--创建游戏盒子-->
+		<script type="text/javascript">
+			window.onload  =function(){//用于加载所有的js代码
+				var box = document.getElementsByClassName("box")[0];//通过类名获取到创建的div元素
+				box.style.width = window.innerWidth+"px";//设置游戏盒子的宽为页面可见内容的宽度
+				box.style.height  =window.innerHeight+"px";//设置游戏盒子的高度为页面可见内容的高度
+				var type = false;//判断鼠标事件的状态
+				var setfruit = setInterval(function(){//设置水果的定时器，创建水果
+					var fruit = document.createElement("div");//创建水果div元素
+					fruit.classList.add("fruit");//给创建的每个水果添加类名fruit，以区分其他的div元素或便于以后获取
+					var random =  parseInt(Math.random()*51)+50+"px";//设置50-100的随机数，加'px'表示了像素
+					var colorOne = parseInt(Math.random()*256);//随机得到rgb的第一个颜色参数
+					var colorTwo = parseInt(Math.random()*256);//随机得到rgb的第二个颜色参数
+					var colorThree = parseInt(Math.random()*256);//随机得到rgb的第三个颜色参数
+					var fruitY = parseInt(Math.random()*window.innerHeight/2);//水果的起始高度位于游戏盒子中间
+					var fruitX = parseInt(Math.random()*window.innerWidth);//水果的起始水平位置可在游戏盒子任意处
+					fruit.style.width = random;//设置水果的宽度随机
+					fruit.style.height = random;//设置水果的高度随机
+					fruit.style.borderRadius= "50%";//设置水果的边框为圆弧
+					fruit.style.backgroundColor = "rgb("+colorOne+","+colorTwo+","+colorThree+")";//通过得到的参数设置水果的背景颜色
+					fruit.style.position = "absolute";//相对游戏盒子定位
+					fruit.style.top = fruitY+"px";//设置水果距离游戏盒子顶部的距离
+					fruit.style.left = fruitX+"px";//设置水果距离游戏盒子左边的距离
+					box.appendChild(fruit);//将创建好的水果节点添加到游戏盒子中
+					var t = 0;//运行轨迹要用到的时间
+					var startY = parseInt(fruit.style.top);//获取水果距离游戏盒子顶部的距离，并转化为整型
+					var startX = parseInt(fruit.style.left);//获取水果距离游戏盒子左边的距离，并转化为整型
+					var num;//定义num为全局变量，用于控制水果的水平运动轨迹向左还是向右
+					if(startX>window.innerWidth/2){
+						num = -1//如果水果在盒子的左半部分产生，则水果的水平运动方向向左
+					}else if(startX<window.innerWidth/2){
+						num = 1//如果水果在盒子的右半部分产生，则水果的水平运动方向向右
+					}else{
+						num = 0//如果水果在盒子的中间产生，则水果运动轨迹是垂直的
+					}
+					var runfruit = setInterval(function(){
+						var v = parseInt(Math.random()*11);//水平方向的速度为0-10的随机数
+						var g = parseInt(Math.random()*11)+10;//重力加速度为10-20的随机数
+						t+=0.01;//运动时间的累加
+						var topY = 100*t*t/2+startY; 
+						//垂直方向的运动公式
+						if(topY>=window.innerHeight){
+							clearInterval(runfruit);//如果水果运动超出游戏盒子底部，清除水果运动定时器
+							fruit.parentNode.removeChild(fruit);
+							//如果水果移动，到达或超过游戏盒子底部，删除水果节点
+						}
+						fruit.style.top = topY+"px";//重新赋值
+						//水平方向的运动公式
+						var leftX = num*(10*t+20*t*t/2)+startX;
+						fruit.style.left = leftX+"px";//重新赋值
+					},1)
+					
+				},1000);
+				window.onmousedown = function(){
+					type = true//鼠标按下type状态为true
+				};
+				window.onmouseup = function(){
+					type = false//鼠标松开type状态为false
+				};
+				window.onmousemove  =function(e){
+					type = true;//鼠标移动type状态为true
+//					console.log(e.pageX);
+//					console.log(e.pageY);
+					//调用划除水果的函数，参数分别为当前页面的X坐标，Y坐标，创建的水果节点构成的数组
+					clear(e.pageX,e.pageY,document.getElementsByClassName("fruit"))
+					if(type){//鼠标按下或移动时要发生的事
+						var dom = document.createElement("div");//创建div元素节点,用于切水果
+						//设置水果“切线”的样式
+						dom.style.width = "6px";
+						dom.classList.add("dom");//添加类名
+						dom.style.height = "6px";
+						dom.style.backgroundColor = "white";
+						dom.style.borderRadius = "50%";
+						dom.style.opacity = 1;//透明度为1
+						dom.style.position = "absolute";//相对游戏盒子定位
+						//每个切线div的中心位置为鼠标的位置
+						dom.style.top = e.pageY+3+"px";
+						dom.style.left = e.pageX+3+"px";
+						dom.style.transform = "scale(1,1)";//定义缩放因子
+						box.appendChild(dom);//将创建的切线节点添加到游戏盒子中
+						var scale  = 1;
+						var opacity = 1;
+						var setdomanimated = setInterval(function(){//设置定时器，控制切线缩放与透明度
+							 scale-=0.01;//缩放因子递减
+							 opacity-=0.01;//透明度递减
+							 dom.style.opacity = opacity;//得到当前切线点的透明度
+							 dom.style.transform = "scale("+scale+","+scale+")";
+							 if(opacity<=0){//如果透明度为0，清除切线的定时器
+							 	clearInterval(setdomanimated);
+							 	for(var i = 0;i<document.getElementsByClassName("dom").length-15;i++){
+							 		document.getElementsByClassName("dom")[i].parentNode.removeChild(document.getElementsByClassName("dom")[i])
+							 		//清除部分dom节点，剩余15个节点作为尾巴
+							 	}
+							 }
+						},1)
+					}
+				}
+				
+			}
+			//划除水果
+			function clear(x,y,allball){
+				for(var i = 0;i<allball.length;i++){//遍历每个水果节点
+					var left =  parseInt(allball[i].style.left);//获取每个水果的左边距
+					var top =  parseInt(allball[i].style.top);//获取每个水果的上边距
+					var width = parseInt(allball[i].style.width);//获取每个水果的宽度
+					var height = parseInt(allball[i].style.height);//获取每个水果的高度
+					var leftwidth = left+width;//每个水果的右边框距离盒子的左边距
+					var topheight = top+height//每个水果的下边框距离盒子的上边距
+					if(x>left&&x<leftwidth&&y>top&&y<topheight){
+						console.log("删除")
+						//如果鼠标当前划过的位置在水果的边框之内，则删除该水果节点
+						allball[i].parentNode.removeChild(allball[i])
+					}
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

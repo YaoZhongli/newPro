@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>飞机游戏</title>
+		<style type="text/css">
+			.box {
+				width: 480px;
+				height: 700px;
+				position: relative;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				background-color: #000000;
+				overflow: hidden;
+			}
+			.scorespan{
+				color: white;
+				font-size: 24px;
+				z-index: 1000;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="box">
+			<span class="scorespan">分数:0</span>
+		</div>
+		<script> 
+			var bcimg = ["bg__01.png", "bg__02.png", "bg__03.png", "bg__04.png", "bg__05.png", "bg__06.png", "bg__07.png", "bg__08.png","bg__01.png"];
+			var bgbox = document.getElementsByClassName("box")[0];
+			//创建游戏地图
+			function gameMap() {
+				for(let i = 0; i < bcimg.length; i++) {
+					var imgdiv = document.createElement("div");
+					imgdiv.classList.add("imgbox");
+					imgdiv.style.backgroundImage = "url(img/" + bcimg[i] + ")";
+					imgdiv.style.width = "480px";
+					imgdiv.style.height = "100px";
+					imgdiv.style.position = 'absolute';
+					imgdiv.style.top = i * 100 + 'px';
+					imgdiv.style.backgroundSize = '100% 100%';
+					imgdiv.style.backgroundRepeat = "no-repeat";
+					bgbox.appendChild(imgdiv);
+				}
+			}
+			//设置地图移动
+			var moveMap = function(){
+				var settop = setInterval(function(){
+					for(var j=0;j<bcimg.length;j++){
+						var topvalues = parseInt(bgbox.children[j].style.top);
+						if(topvalues<=-99){
+							bgbox.children[j].style.top = 700+"px";
+						}else{
+							topvalues--;
+							bgbox.children[j].style.top = topvalues+"px";
+						}
+					}
+				},10);
+			};
+			//创建战机
+			var player = document.createElement("div");
+			var playerPlane = function(){
+				player.classList.add("player");
+				player.style.backgroundImage = "url(img/player.png)";
+				player.style.width = "100px";
+				player.style.height = "80px";
+				player.style.position = "absolute";
+				player.style.top = "500px";
+				player.style.left = "190px";
+				player.style.backgroundSize = '100% 100%';
+				player.style.backgroundRepeat = "no-repeat";
+				bgbox.appendChild(player);
+			};
+			//键盘移动事件
+			var keyEvent = function(){
+				window.onkeydown = function(e){
+					var planetop = parseInt(player.style.top);
+					var planeleft = parseInt(player.style.left);
+					switch(e.keyCode){
+						case 87:
+							planetop-=10;
+							if(planetop<=0){
+								planetop=0;
+							}
+							player.style.top=planetop+"px";
+							break;
+						case 83:
+							planetop+=10;
+							if(planetop>=620){
+								planetop=620;
+							}
+							player.style.top=planetop+"px";
+							break;
+						case 65:
+							planeleft-=10;
+							if(planeleft<=0){
+								planeleft=0;
+							}
+							player.style.left=planeleft+"px";
+							break;
+						case 68:
+							planeleft+=10;
+							if(planeleft>=380){
+								planeleft=380;
+							}
+							player.style.left=planeleft+"px";
+							break;
+					}
+				}
+			};
+			//创建子弹
+			var bullet = function(){
+				window.onkeyup = function(e){
+					if(e.keyCode==32){//空格发射子弹
+						var sendbullet = document.createElement("div");
+						var flytop = parseInt(player.style.top);
+						var flyleft = parseInt(player.style.left);
+						sendbullet.style.width = "20px";
+						sendbullet.style.height = "30px";
+						sendbullet.style.backgroundImage = "url(img/bullet.png)";
+						sendbullet.style.backgroundSize = "100% 100%";
+						sendbullet.style.backgroundRepeat = "no-repeat";
+						sendbullet.style.position = "absolute";
+						sendbullet.style.top = flytop-30+"px";
+						sendbullet.style.left = flyleft+50-10+"px";
+						bgbox.appendChild(sendbullet);
+						var setbullet = setInterval(function(){
+							var bullettop = parseInt(sendbullet.style.top);
+							bullettop--;
+							sendbullet.style.top = bullettop + "px";
+							boom(sendbullet,document.getElementsByClassName("enemys"),setbullet);
+							if(bullettop<=0){
+								clearInterval(setbullet);
+								sendbullet.parentNode.removeChild(sendbullet);
+							}
+						},1);
+						
+					}
+				}
+			};
+			//创建敌机
+			var enemyPlane = function(){
+				var enemyarr = ["enemy.png","enemy1.png"];
+				var setenemy = setInterval(function(){
+					var enemyfly = document.createElement("div");
+					enemyfly.style.width = "60px";
+					enemyfly.style.height = "40px";
+					enemyfly.classList.add("enemys")
+					enemyfly.style.position = "absolute";
+					enemyfly.style.backgroundSize = "100% 100%";
+					enemyfly.style.backgroundRepeat ="no-repeat";
+					enemyfly.style.top = 0;
+					enemyfly.style.left = parseInt(Math.random()*481)+'px';
+					var random = parseInt(Math.random()*2);
+					enemyfly.style.backgroundImage = "url(img/"+enemyarr[random]+")";
+					bgbox.appendChild(enemyfly);
+					var setEnemyMove = setInterval(function(){
+						var enemy_top = parseInt(enemyfly.style.top);
+						enemy_top++;
+						enemyfly.style.top = enemy_top +'px';
+						if(enemy_top>701){
+							clearInterval(setEnemyMove);
+							enemyfly.parentNode.removeChild(enemyfly);
+						}
+					},10);
+				},1000);
+			};
+			//敌机与子弹相撞发生碰撞
+			var boom = function(flybullet,enemysall,setbulletanimated){
+				var flybullet_top = parseInt(flybullet.style.top);
+				var flybullet_left = parseInt(flybullet.style.left);
+				var flybullet_width = parseInt(flybullet.style.width);
+				var flybullet_height = parseInt(flybullet.style.height);
+				for(var i = 0;i<enemysall.length;i++){
+					var enemysall_top = parseInt(enemysall[i].style.top);
+					var enemysall_left = parseInt(enemysall[i].style.left);
+					var enemysall_width = parseInt(enemysall[i].style.width);
+					var enemysall_height = parseInt(enemysall[i].style.height);
+					if(enemysall_top<flybullet_top+flybullet_height&&enemysall_top>flybullet_top-enemysall_height&&enemysall_left>flybullet_left-enemysall_width&&enemysall_left<flybullet_left+flybullet_width){
+						enemysall[i].style.display = "none";
+						enemysall[i].classList.remove("enemys");
+						clearInterval(setbulletanimated);
+						flybullet.parentNode.removeChild(flybullet)
+					}else{
+						console.log("飞过")
+					}
+				}
+			}
+			gameMap();
+			moveMap();
+			playerPlane();
+			keyEvent();
+			bullet();
+			enemyPlane();
+		</script>
+	</body>
+
+</html>

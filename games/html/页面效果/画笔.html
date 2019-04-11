@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>画笔</title>
+		<style type="text/css">
+			
+			.penStyle{
+				width: 10px;
+				height: 10px;
+				background-color: lightblue;
+				border-radius: 50%;
+				position: absolute;/*给画笔添加绝对位置*/
+			}
+			select{
+				width: 100px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<select id="colors">
+			<option value="lightblue">原色</option>
+			<option value="yellow">黄色</option>
+			<option value="green">绿色</option>
+		</select>
+		<select id="bold">
+			<option value="20px">极细</option>
+			<option value="50px">正常</option>
+			<option value="100px">加粗</option>
+		</select>
+		<input type="button" id="eraser" value="橡皮擦" />
+		
+		<div id="board"></div>
+		<script type="text/javascript">
+			var board = document.getElementById("board");
+			var box = document.body;
+			var judge = false;
+			var select1 = document.querySelector("#colors");
+			var colors ;  
+//				= select1.options;
+			var Select2 = document.querySelector("#bold");
+			var penSize ;
+//				= Select2.options;
+//			Select2.selectedIndex = 1;
+			var eraser = document.querySelector("#eraser");
+			
+			board.style.width = "1200px";
+			board.style.height = "1000px";
+		
+			
+			board.onmousedown = function(){
+				judge = true;
+			};
+			board.onmouseup = function(){
+				judge = false;
+			};
+			
+			
+			board.onmousemove= function(e){
+				if(judge){
+					var pen = document.createElement("div");
+					pen.classList.add("penStyle");
+					pen.style.top = e.pageY + "px";
+					pen.style.left = e.pageX + "px";
+					pen.style.backgroundColor = colors;
+					pen.style.width = penSize;
+					pen.style.height = penSize;
+					
+//					if(select1.selectedIndex==1){
+//						pen.style.backgroundColor = "yellow";
+//					}else if(select1.selectedIndex==2){
+//						pen.style.backgroundColor = "green";
+//					}else{}
+//					
+//					if(Select2.selectedIndex==0){
+//						pen.style.width = "5px";
+//						pen.style.height = "5px";
+//					}else if(Select2.selectedIndex==2){
+//						pen.style.width = "15px";
+//						pen.style.height = "15px";
+//					}else{}
+					
+						
+					box.appendChild(pen);
+				}else{
+					
+				}
+				
+					
+			};
+			select1.onchange = function(){
+				colors = select1.options[select1.selectedIndex].value;
+				console.log(colors);
+			};
+			Select2.onchange = function(){
+				penSize = Select2.options[Select2.selectedIndex].value;
+				console.log(penSize);
+			};
+			eraser.onclick = function(){
+				
+			};
+			
+		</script>
+	</body>
+</html>

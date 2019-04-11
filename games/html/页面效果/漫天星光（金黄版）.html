@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>漫天星光</title>
+		<style type="text/css">
+			.bgbox{
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+	<!--让浏览器展现满天星光的动态效果-->
+		<div class="bgbox"></div>
+		<script type="text/javascript">
+			var bgbox = document.getElementsByClassName("bgbox")[0];
+			bgbox.style.width = parseInt(window.innerWidth)-20+'px';
+			bgbox.style.height = parseInt(window.innerHeight)-20+'px';
+			bgbox.style.backgroundColor = "black";
+			function CreateStars(){
+				var bgbox_width = parseInt(bgbox.style.width);
+				var bgbox_height = parseInt(bgbox.style.height);
+				
+				var setstar = setInterval(function(){
+//					var color1 = parseInt(Math.random()*256);
+//					var color2 = parseInt(Math.random()*256);
+//					var color3 = parseInt(Math.random()*256);
+					var startop = parseInt(Math.random()*bgbox_height-2);
+					var starleft = parseInt(Math.random()*bgbox_width-2);
+					var starw_h = parseInt(Math.random()*15)+1;
+					var star = document.createElement("div");
+//					star.style.backgroundColor = "rgb("+color1+","+color2+","+color3+")";
+					star.style.backgroundColor ="yellow";
+					star.style.width = starw_h+'px';
+					star.style.height = starw_h+'px';
+					star.style.borderRadius = "50%";
+					star.style.position = 'absolute';
+					star.style.top = startop+'px';
+					star.style.left = starleft+'px';
+					star.classList.add("stars");
+					bgbox.appendChild(star);
+					var scale_num = 1;
+					var op = 1;
+					var setblink = setInterval(function(){
+						scale_num-=0.01;
+						op-=0.01;
+						star.style.transform = "scale("+scale_num+","+scale_num+")";
+						star.style.opacity = op;
+						if(op == 0){
+							clearInterval(setblink);
+							star.parentNode.removeChild(star);
+						}
+					},10);
+				},10);
+			}
+			CreateStars();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>连连看</title>
+		<style type="text/css">
+			#backboard{
+				width: 800px;
+				height: 800px;
+				background-color: palevioletred;
+				margin: 10px auto;
+			}
+			#changeMap{
+				width: 300px;
+				height: 60px;
+				background-color: deeppink;
+				color: wheat;
+				font-size: 24px;
+				margin-left: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="backboard" style="width: 800px;height: 800px;"></div>
+		<button id="changeMap">更换地图</button>
+		<script>
+			var backboard = document.getElementById("backboard");
+			var changeMap = document.getElementById("changeMap");
+			var arr = [
+				[4,5,1,0,2,0],
+				[2,0,3,1,0,5],
+				[0,1,0,2,3,0],
+				[4,0,5,4,1,2],
+				[5,2,0,4,0,4],
+				[0,2,1,2,0,5]
+			];
+			var arr2 = [
+				[0,0,4,0,0,5],
+				[2,0,2,0,0,0],
+				[0,1,0,2,0,3],
+				[0,0,2,0,4,0],
+				[2,1,0,2,0,0],
+				[0,1,0,0,0,4]
+				];
+			
+//			console.log(mapWidth);
+//			console.log(mapHeight);
+			
+			var x;
+			var y;
+			var data;
+			var type=0;
+			
+			
+			
+			var Map = function(arr){
+				backboard.innerHTML = "";
+				var mapWidth = backboard.style.width;
+				var mapHeight = backboard.style.height;
+				var imgWidth = parseInt(mapWidth)/arr.length+"px";
+//				console.log(imgWidth);
+				var imgHeight = parseInt(mapHeight)/arr[0].length+"px";
+//				console.log(imgHeight); 
+				for(var i=0;i<arr.length;i++){
+					for(var j=0;j<arr[i].length;j++){
+//						console.log(arr[i][j]);
+						var bcimg = document.createElement("div");
+						bcimg.style.width = imgWidth;
+						bcimg.style.height = imgHeight;
+						
+						bcimg.classList.add("divs");
+						bcimg.setAttribute("data-x",i);
+						bcimg.setAttribute("data-y",j);
+						bcimg.setAttribute("data-data",arr[i][j]);
+						
+						bcimg.style.backgroundImage = "url(../img/tree.jpg)";
+						bcimg.style.backgroundSize = "100% 100%";
+						bcimg.style.backgroundRepeat = "no-repeat";
+						bcimg.style.float ="left";
+						if(arr[i][j]==0){
+							bcimg.style.backgroundImage = "url(../img/tree.jpg)";
+						}else if(arr[i][j]==1){
+							bcimg.style.backgroundImage = "url(../img/pig.jpg)";
+						}else if(arr[i][j]==2){
+							bcimg.style.backgroundImage = "url(../img/cat.png)";
+						}else if(arr[i][j]==3){
+							bcimg.style.backgroundImage = "url(../img/dog.jpg)";
+						}else if(arr[i][j]==4){
+							bcimg.style.backgroundImage = "url(../img/snow.jpg)";
+						}else if(arr[i][j]==5){
+							bcimg.style.backgroundImage = "url(../img/chicken.jpg)";
+						}else if(arr[i][j]==6){
+							bcimg.style.backgroundImage  = "none";
+						}
+						backboard.appendChild(bcimg);
+					  }
+					}
+					//给每一个小格子添加点击事件
+					for(var k= 0;k<arr.length*arr[0].length;k++){
+						document.getElementsByClassName("divs")[k].onclick = function(){
+							if(type == 0){
+								x = this.getAttribute("data-x");
+								y = this.getAttribute("data-y");
+								data = this.getAttribute("data-data");
+								type =1;
+							}else if( type==1){
+								type = 0;
+								if(this.getAttribute("data-data")==data)
+								{
+									console.log("两次图片一样");
+//									score++;
+									arr[this.getAttribute("data-x")][this.getAttribute("data-y")] =6;
+									arr[x][y] = 6;
+									Map(arr);
+								}else{
+									console.log("两次图片不一样，不能进行消除");
+								}
+				            }
+			            }
+			    }
+		    }
+			Map(arr);
+			var time=0;
+			changeMap.onclick = function(){
+				type = 0;
+				if(time%2==0){
+					Map(arr2);
+				}else{
+					Map(arr);
+				}
+				time++;
+			 }
+		</script>
+	</body>
+</html>
